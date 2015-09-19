@@ -50,6 +50,17 @@ Lander Casado, Philippas Tsigas.
 This program depends on specific hardware platforms. Currently the supported
 platforms are:
 
+	- RFM95W-BB
+        MCU     : STM32L151CB - 128K FLASH, 10K RAM, Timers, SPI, I2C,
+                                USART,
+                                USB 2.0 full-speed device/host/OTG controller,
+                                DAC, ADC, DMA
+        RADIO   : RFM98W
+        ANTENNA : Connector for external antenna
+        LEDS    : 3
+        GPS     : Optional
+
+		
     - Bleeper-72
         MCU     : STM32L151RD - 384K FLASH, 48K RAM, Timers, SPI, I2C,
                                 USART,
