@@ -1,10 +1,10 @@
 /*
- / _____)             _              | |
-( (____  _____ ____ _| |_ _____  ____| |__
- \____ \| ___ |    (_   _) ___ |/ ___)  _ \
+ / _____)			 _				| |
+( (____	_____ ____ _| |_ _____	____| |__
+ \____ \| ___ |	(_	_) ___ |/ ___)	_ \
  _____) ) ____| | | || |_| ____( (___| | | |
 (______/|_____)_|_|_| \__)_____)\____)_| |_|
-    (C)2013 Semtech
+	(C)2013 Semtech
 
 Description: Delay functions implementation
 
@@ -16,17 +16,13 @@ Maintainer: Miguel Luis and Gregory Cristian
 
 void Delay( float s )
 {
-    DelayMs( s * 1000.0f );
+	DelayMs( s * 1000.0f );
 }
 
 void DelayMs( uint32_t ms )
 {
-    if( TimerGetLowPowerEnable( ) == true )
-    {
-        RtcDelayMs( ms );
-    }
-    else
-    {
-        TimerHwDelayMs( ms );
-    }
+	if ( TimerGetLowPowerEnable( ) == true )
+		RtcDelayMs( ms );
+	else
+		TimerHwDelayMs( ms );
 }

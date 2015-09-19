@@ -1,10 +1,10 @@
 /*
- / _____)             _              | |
-( (____  _____ ____ _| |_ _____  ____| |__
- \____ \| ___ |    (_   _) ___ |/ ___)  _ \
+ / _____)			 _				| |
+( (____	_____ ____ _| |_ _____	____| |__
+ \____ \| ___ |	(_	_) ___ |/ ___)	_ \
  _____) ) ____| | | || |_| ____( (___| | | |
 (______/|_____)_|_|_| \__)_____)\____)_| |_|
-    (C)2013 Semtech
+	(C)2013 Semtech
 
 Description: Implements a FIFO buffer
 
@@ -16,43 +16,43 @@ Maintainer: Miguel Luis and Gregory Cristian
 
 static uint16_t FifoNext( Fifo_t *fifo, uint16_t index )
 {
-    return ( index + 1 ) % fifo->Size;
+	return ( index + 1 ) % fifo->Size;
 }
 
 void FifoInit( Fifo_t *fifo, uint8_t *buffer, uint16_t size )
 {
-    fifo->Begin = 0;
-    fifo->End = 0;
-    fifo->Data = buffer;
-    fifo->Size = size;
+	fifo->Begin = 0;
+	fifo->End = 0;
+	fifo->Data = buffer;
+	fifo->Size = size;
 }
 
 void FifoPush( Fifo_t *fifo, uint8_t data )
 {
-    fifo->End = FifoNext( fifo, fifo->End );
-    fifo->Data[fifo->End] = data;
+	fifo->End = FifoNext( fifo, fifo->End );
+	fifo->Data[fifo->End] = data;
 }
 
 uint8_t FifoPop( Fifo_t *fifo )
 {
-    uint8_t data = fifo->Data[FifoNext( fifo, fifo->Begin )];
+	uint8_t data = fifo->Data[FifoNext( fifo, fifo->Begin )];
 
-    fifo->Begin = FifoNext( fifo, fifo->Begin );
-    return data;
+	fifo->Begin = FifoNext( fifo, fifo->Begin );
+	return data;
 }
 
 void FifoFlush( Fifo_t *fifo )
 {
-    fifo->Begin = 0;
-    fifo->End = 0;
+	fifo->Begin = 0;
+	fifo->End = 0;
 }
 
 bool IsFifoEmpty( Fifo_t *fifo )
 {
-    return ( fifo->Begin == fifo->End );
+	return ( fifo->Begin == fifo->End );
 }
 
 bool IsFifoFull( Fifo_t *fifo )
 {
-    return ( FifoNext( fifo, fifo->End ) == fifo->Begin );
+	return ( FifoNext( fifo, fifo->End ) == fifo->Begin );
 }
