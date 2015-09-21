@@ -255,11 +255,25 @@ static void OnMacEvent( LoRaMacEventFlags_t *flags, LoRaMacEventInfo_t *info )
 	TxDone = true;
 }
 
+#include "RC5.h"
+
 /**
  * Main application entry point.
  */
 int main( void )
 {
+#if 0	// Test RC5 encoding/decoding
+	static const uint8_t RC5_Data[] = "Test RC5 encoder.";
+	static RC5_BLOCK_t RC5_Buffer[RC5_BLOCKS(1024)];
+
+	int blocks;
+	RC5_Init((const uint8_t *)"TestRC5");
+	blocks = RC5_Encode(RC5_Buffer, (uint8_t *)RC5_Data, sizeof(RC5_Data));
+	RC5_Decode(RC5_Buffer, blocks);
+	while (1)
+		;
+#endif
+
 #if ( OVER_THE_AIR_ACTIVATION != 0 )
 	uint8_t sendFrameStatus = 0;
 #endif

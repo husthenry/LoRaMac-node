@@ -124,7 +124,7 @@
             <Oh166RecLen>16</Oh166RecLen>
           </OPTHX>
           <Simulator>
-            <UseSimulator>0</UseSimulator>
+            <UseSimulator>1</UseSimulator>
             <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
             <RunToMain>1</RunToMain>
             <RestoreBreakpoints>1</RestoreBreakpoints>
@@ -136,7 +136,7 @@
             <RestoreSysVw>1</RestoreSysVw>
           </Simulator>
           <Target>
-            <UseTarget>1</UseTarget>
+            <UseTarget>0</UseTarget>
             <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
             <RunToMain>1</RunToMain>
             <RestoreBreakpoints>1</RestoreBreakpoints>
@@ -148,7 +148,7 @@
             <RestoreSysVw>1</RestoreSysVw>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>11</TargetSelection>
+          <TargetSelection>8</TargetSelection>
           <SimDlls>
             <CpuDll></CpuDll>
             <CpuDllArguments></CpuDllArguments>
@@ -723,6 +723,11 @@
               <FileName>cmac.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\src\system\crypto\cmac.c</FilePath>
+            </File>
+            <File>
+              <FileName>RC5.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\src\system\crypto\RC5.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1446,6 +1451,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\..\..\src\system\crypto\cmac.c</FilePath>
             </File>
+            <File>
+              <FileName>RC5.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\src\system\crypto\RC5.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
@@ -2166,6 +2176,11 @@
               <FileName>cmac.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\src\system\crypto\cmac.c</FilePath>
+            </File>
+            <File>
+              <FileName>RC5.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\src\system\crypto\RC5.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2888,6 +2903,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\..\..\src\system\crypto\cmac.c</FilePath>
             </File>
+            <File>
+              <FileName>RC5.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\src\system\crypto\RC5.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
@@ -3608,6 +3628,11 @@
               <FileName>cmac.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\src\system\crypto\cmac.c</FilePath>
+            </File>
+            <File>
+              <FileName>RC5.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\src\system\crypto\RC5.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -4330,6 +4355,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\..\..\src\system\crypto\cmac.c</FilePath>
             </File>
+            <File>
+              <FileName>RC5.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\src\system\crypto\RC5.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
@@ -5051,6 +5081,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\..\..\src\system\crypto\cmac.c</FilePath>
             </File>
+            <File>
+              <FileName>RC5.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\src\system\crypto\RC5.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
@@ -5771,6 +5806,11 @@
               <FileName>cmac.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\src\system\crypto\cmac.c</FilePath>
+            </File>
+            <File>
+              <FileName>RC5.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\..\src\system\crypto\RC5.c</FilePath>
             </File>
           </Files>
         </Group>
