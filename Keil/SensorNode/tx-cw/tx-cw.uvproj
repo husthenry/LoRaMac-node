@@ -10,15 +10,16 @@
       <TargetName>tx-cw-433</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
-          <Device>STM32L151C8</Device>
+          <Device>STM32L151CB</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <Cpu>IRAM(0x20000000-0x200027FF) IROM(0x8000000-0x800FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
+          <Cpu>IRAM(0x20000000-0x20003FFF) IROM(0x8000000-0x801FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile>"STARTUP\ST\STM32L1xx\startup_stm32l1xx_md.s" ("STM32L1xx Medium density Startup Code")</StartupFile>
-          <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL010000)</FlashDriverDll>
-          <DeviceId>5238</DeviceId>
+          <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL020000)</FlashDriverDll>
+          <DeviceId>5244</DeviceId>
           <RegisterFile>stm32l1xx.h</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
@@ -82,6 +83,8 @@
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+            <nStopA1X>0</nStopA1X>
+            <nStopA2X>0</nStopA2X>
           </AfterMake>
           <SelectedForBatchBuild>0</SelectedForBatchBuild>
           <SVCSIdString></SVCSIdString>
@@ -104,11 +107,11 @@
         </CommonProperty>
         <DllOption>
           <SimDllName>SARMCM3.DLL</SimDllName>
-          <SimDllArguments> -REMAP -MPU</SimDllArguments>
+          <SimDllArguments>-MPU -REMAP</SimDllArguments>
           <SimDlgDll>DCM.DLL</SimDlgDll>
           <SimDlgDllArguments>-pCM3</SimDlgDllArguments>
           <TargetDllName>SARMCM3.DLL</TargetDllName>
-          <TargetDllArguments> -MPU</TargetDllArguments>
+          <TargetDllArguments>-MPU</TargetDllArguments>
           <TargetDlgDll>TCM.DLL</TargetDlgDll>
           <TargetDlgDllArguments>-pCM3</TargetDlgDllArguments>
         </DllOption>
@@ -173,7 +176,7 @@
           </Flash1>
           <bUseTDR>0</bUseTDR>
           <Flash2>STLink\ST-LINKIII-KEIL_SWO.dll</Flash2>
-          <Flash3>"" ()</Flash3>
+          <Flash3></Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -225,6 +228,7 @@
             <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
+            <nSecure>0</nSecure>
             <RoSelD>3</RoSelD>
             <RwSelD>3</RwSelD>
             <CodeSel>0</CodeSel>
@@ -278,12 +282,12 @@
               <IRAM>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x2800</Size>
+                <Size>0x4000</Size>
               </IRAM>
               <IROM>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0x20000</Size>
               </IROM>
               <XRAM>
                 <Type>0</Type>
@@ -308,7 +312,7 @@
               <OCR_RVCT4>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0x20000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
@@ -333,7 +337,7 @@
               <OCR_RVCT9>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x2800</Size>
+                <Size>0x4000</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>
@@ -359,11 +363,18 @@
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
             <useXO>0</useXO>
+            <v6Lang>1</v6Lang>
+            <v6LangP>1</v6LangP>
+            <vShortEn>1</vShortEn>
+            <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_DEBUGGER USE_BAND_433</Define>
+              <Define>SE_HAL_DRIVER STM32L151xB USE_DEBUGGER USE_BAND_433</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\src;..\..\..\src\boards\SensorNode;..\..\..\src\boards\SensorNode\cmsis;..\..\..\src\boards\mcu\stm32;..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\inc;..\..\..\src\mac;..\..\..\src\peripherals;..\..\..\src\radio;..\..\..\src\system;..\..\..\src\system\crypto</IncludePath>
+              <IncludePath>..\..\..\src;..\..\..\src\boards\SensorNode;..\..\..\src\boards\SensorNode\cmsis;..\..\..\src\boards\mcu\stm32;..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\inc;..\..\..\src\mac;..\..\..\src\peripherals;..\..\..\src\radio;..\..\..\src\system;..\..\..\src\system\crypto</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -376,6 +387,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -457,11 +469,6 @@
               <FilePath>..\..\..\src\boards\SensorNode\sx1276-board.c</FilePath>
             </File>
             <File>
-              <FileName>timer-board.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\SensorNode\timer-board.c</FilePath>
-            </File>
-            <File>
               <FileName>uart-board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\src\boards\SensorNode\uart-board.c</FilePath>
@@ -472,9 +479,9 @@
           <GroupName>boards\SensorNode\cmsis</GroupName>
           <Files>
             <File>
-              <FileName>startup_stm32l1xx_md.s</FileName>
+              <FileName>startup_stm32l151xb.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\..\..\src\boards\SensorNode\cmsis\arm-std\startup_stm32l1xx_md.s</FilePath>
+              <FilePath>..\..\..\src\boards\SensorNode\cmsis\arm-std\startup_stm32l151xb.s</FilePath>
             </File>
             <File>
               <FileName>system_stm32l1xx.c</FileName>
@@ -484,77 +491,87 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>boards\SensorNode\STM32L1xx_StdPeriph_Driver</GroupName>
+          <GroupName>boards\SensorNode\STM32L1xx_HAL_Driver</GroupName>
           <Files>
             <File>
-              <FileName>misc.c</FileName>
+              <FileName>stm32l1xx_hal.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\misc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_adc.c</FileName>
+              <FileName>stm32l1xx_hal_adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_adc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_dbgmcu.c</FileName>
+              <FileName>stm32l1xx_hal_adc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dbgmcu.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_dma.c</FileName>
+              <FileName>stm32l1xx_hal_cortex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dma.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_cortex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_exti.c</FileName>
+              <FileName>stm32l1xx_hal_dma.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_exti.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_dma.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_gpio.c</FileName>
+              <FileName>stm32l1xx_hal_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_gpio.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_gpio.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_i2c.c</FileName>
+              <FileName>stm32l1xx_hal_i2c.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_i2c.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_i2c.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_pwr.c</FileName>
+              <FileName>stm32l1xx_hal_pwr.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_pwr.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_rcc.c</FileName>
+              <FileName>stm32l1xx_hal_pwr_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rcc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_rtc.c</FileName>
+              <FileName>stm32l1xx_hal_rcc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rtc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_spi.c</FileName>
+              <FileName>stm32l1xx_hal_rcc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_spi.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_syscfg.c</FileName>
+              <FileName>stm32l1xx_hal_rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_syscfg.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_tim.c</FileName>
+              <FileName>stm32l1xx_hal_rtc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_tim.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_usart.c</FileName>
+              <FileName>stm32l1xx_hal_spi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_usart.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_spi_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_uart.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -669,15 +686,16 @@
       <TargetName>tx-cw-433-Bootloader</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
-          <Device>STM32L151C8</Device>
+          <Device>STM32L151CB</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <Cpu>IRAM(0x20000000-0x200027FF) IROM(0x8000000-0x800FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
+          <Cpu>IRAM(0x20000000-0x20003FFF) IROM(0x8000000-0x801FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile>"STARTUP\ST\STM32L1xx\startup_stm32l1xx_md.s" ("STM32L1xx Medium density Startup Code")</StartupFile>
-          <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL010000)</FlashDriverDll>
-          <DeviceId>5238</DeviceId>
+          <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL020000)</FlashDriverDll>
+          <DeviceId>5244</DeviceId>
           <RegisterFile>stm32l1xx.h</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
@@ -741,6 +759,8 @@
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+            <nStopA1X>0</nStopA1X>
+            <nStopA2X>0</nStopA2X>
           </AfterMake>
           <SelectedForBatchBuild>0</SelectedForBatchBuild>
           <SVCSIdString></SVCSIdString>
@@ -763,11 +783,11 @@
         </CommonProperty>
         <DllOption>
           <SimDllName>SARMCM3.DLL</SimDllName>
-          <SimDllArguments> -REMAP -MPU</SimDllArguments>
+          <SimDllArguments>-MPU -REMAP</SimDllArguments>
           <SimDlgDll>DCM.DLL</SimDlgDll>
           <SimDlgDllArguments>-pCM3</SimDlgDllArguments>
           <TargetDllName>SARMCM3.DLL</TargetDllName>
-          <TargetDllArguments> -MPU</TargetDllArguments>
+          <TargetDllArguments>-MPU</TargetDllArguments>
           <TargetDlgDll>TCM.DLL</TargetDlgDll>
           <TargetDlgDllArguments>-pCM3</TargetDlgDllArguments>
         </DllOption>
@@ -832,7 +852,7 @@
           </Flash1>
           <bUseTDR>0</bUseTDR>
           <Flash2>STLink\ST-LINKIII-KEIL_SWO.dll</Flash2>
-          <Flash3>"" ()</Flash3>
+          <Flash3></Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -884,6 +904,7 @@
             <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
+            <nSecure>0</nSecure>
             <RoSelD>3</RoSelD>
             <RwSelD>3</RwSelD>
             <CodeSel>0</CodeSel>
@@ -937,12 +958,12 @@
               <IRAM>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x2800</Size>
+                <Size>0x4000</Size>
               </IRAM>
               <IROM>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0x20000</Size>
               </IROM>
               <XRAM>
                 <Type>0</Type>
@@ -967,7 +988,7 @@
               <OCR_RVCT4>
                 <Type>1</Type>
                 <StartAddress>0x8003000</StartAddress>
-                <Size>0xd000</Size>
+                <Size>0x1d000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
@@ -992,7 +1013,7 @@
               <OCR_RVCT9>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x2800</Size>
+                <Size>0x4000</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>
@@ -1018,11 +1039,18 @@
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
             <useXO>0</useXO>
+            <v6Lang>1</v6Lang>
+            <v6LangP>1</v6LangP>
+            <vShortEn>1</vShortEn>
+            <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_DEBUGGER USE_BAND_433 USE_BOOTLOADER</Define>
+              <Define>USE_HAL_DRIVER STM32L151xB USE_DEBUGGER USE_BAND_433 USE_BOOTLOADER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\src;..\..\..\src\boards\SensorNode;..\..\..\src\boards\SensorNode\cmsis;..\..\..\src\boards\mcu\stm32;..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\inc;..\..\..\src\mac;..\..\..\src\peripherals;..\..\..\src\radio;..\..\..\src\system;..\..\..\src\system\crypto</IncludePath>
+              <IncludePath>..\..\..\src;..\..\..\src\boards\SensorNode;..\..\..\src\boards\SensorNode\cmsis;..\..\..\src\boards\mcu\stm32;..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\inc;..\..\..\src\mac;..\..\..\src\peripherals;..\..\..\src\radio;..\..\..\src\system;..\..\..\src\system\crypto</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1035,6 +1063,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -1116,11 +1145,6 @@
               <FilePath>..\..\..\src\boards\SensorNode\sx1276-board.c</FilePath>
             </File>
             <File>
-              <FileName>timer-board.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\SensorNode\timer-board.c</FilePath>
-            </File>
-            <File>
               <FileName>uart-board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\src\boards\SensorNode\uart-board.c</FilePath>
@@ -1131,9 +1155,9 @@
           <GroupName>boards\SensorNode\cmsis</GroupName>
           <Files>
             <File>
-              <FileName>startup_stm32l1xx_md.s</FileName>
+              <FileName>startup_stm32l151xb.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\..\..\src\boards\SensorNode\cmsis\arm-std\startup_stm32l1xx_md.s</FilePath>
+              <FilePath>..\..\..\src\boards\SensorNode\cmsis\arm-std\startup_stm32l151xb.s</FilePath>
             </File>
             <File>
               <FileName>system_stm32l1xx.c</FileName>
@@ -1143,77 +1167,87 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>boards\SensorNode\STM32L1xx_StdPeriph_Driver</GroupName>
+          <GroupName>boards\SensorNode\STM32L1xx_HAL_Driver</GroupName>
           <Files>
             <File>
-              <FileName>misc.c</FileName>
+              <FileName>stm32l1xx_hal.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\misc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_adc.c</FileName>
+              <FileName>stm32l1xx_hal_adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_adc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_dbgmcu.c</FileName>
+              <FileName>stm32l1xx_hal_adc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dbgmcu.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_dma.c</FileName>
+              <FileName>stm32l1xx_hal_cortex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dma.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_cortex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_exti.c</FileName>
+              <FileName>stm32l1xx_hal_dma.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_exti.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_dma.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_gpio.c</FileName>
+              <FileName>stm32l1xx_hal_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_gpio.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_gpio.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_i2c.c</FileName>
+              <FileName>stm32l1xx_hal_i2c.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_i2c.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_i2c.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_pwr.c</FileName>
+              <FileName>stm32l1xx_hal_pwr.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_pwr.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_rcc.c</FileName>
+              <FileName>stm32l1xx_hal_pwr_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rcc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_rtc.c</FileName>
+              <FileName>stm32l1xx_hal_rcc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rtc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_spi.c</FileName>
+              <FileName>stm32l1xx_hal_rcc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_spi.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_syscfg.c</FileName>
+              <FileName>stm32l1xx_hal_rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_syscfg.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_tim.c</FileName>
+              <FileName>stm32l1xx_hal_rtc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_tim.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_usart.c</FileName>
+              <FileName>stm32l1xx_hal_spi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_usart.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_spi_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_uart.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1325,18 +1359,19 @@
       </Groups>
     </Target>
     <Target>
-      <TargetName>tx-cw-470</TargetName>
+      <TargetName>tx-cw-780</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
-          <Device>STM32L151C8</Device>
+          <Device>STM32L151CB</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <Cpu>IRAM(0x20000000-0x200027FF) IROM(0x8000000-0x800FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
+          <Cpu>IRAM(0x20000000-0x20003FFF) IROM(0x8000000-0x801FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile>"STARTUP\ST\STM32L1xx\startup_stm32l1xx_md.s" ("STM32L1xx Medium density Startup Code")</StartupFile>
-          <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL010000)</FlashDriverDll>
-          <DeviceId>5238</DeviceId>
+          <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL020000)</FlashDriverDll>
+          <DeviceId>5244</DeviceId>
           <RegisterFile>stm32l1xx.h</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
@@ -1362,14 +1397,14 @@
             <NotGenerated>0</NotGenerated>
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
-          <OutputDirectory>.\obj\tx-cw-470\</OutputDirectory>
+          <OutputDirectory>.\obj\tx-cw-780\</OutputDirectory>
           <OutputName>tx-cw</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
-          <ListingPath>.\lst\tx-cw-470\</ListingPath>
+          <ListingPath>.\lst\tx-cw-780\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
           <CreateBatchFile>0</CreateBatchFile>
@@ -1400,6 +1435,8 @@
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+            <nStopA1X>0</nStopA1X>
+            <nStopA2X>0</nStopA2X>
           </AfterMake>
           <SelectedForBatchBuild>0</SelectedForBatchBuild>
           <SVCSIdString></SVCSIdString>
@@ -1422,11 +1459,11 @@
         </CommonProperty>
         <DllOption>
           <SimDllName>SARMCM3.DLL</SimDllName>
-          <SimDllArguments> -REMAP -MPU</SimDllArguments>
+          <SimDllArguments>-MPU -REMAP</SimDllArguments>
           <SimDlgDll>DCM.DLL</SimDlgDll>
           <SimDlgDllArguments>-pCM3</SimDlgDllArguments>
           <TargetDllName>SARMCM3.DLL</TargetDllName>
-          <TargetDllArguments> -MPU</TargetDllArguments>
+          <TargetDllArguments>-MPU</TargetDllArguments>
           <TargetDlgDll>TCM.DLL</TargetDlgDll>
           <TargetDlgDllArguments>-pCM3</TargetDlgDllArguments>
         </DllOption>
@@ -1491,7 +1528,7 @@
           </Flash1>
           <bUseTDR>0</bUseTDR>
           <Flash2>STLink\ST-LINKIII-KEIL_SWO.dll</Flash2>
-          <Flash3>"" ()</Flash3>
+          <Flash3></Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -1543,6 +1580,7 @@
             <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
+            <nSecure>0</nSecure>
             <RoSelD>3</RoSelD>
             <RwSelD>3</RwSelD>
             <CodeSel>0</CodeSel>
@@ -1596,12 +1634,12 @@
               <IRAM>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x2800</Size>
+                <Size>0x4000</Size>
               </IRAM>
               <IROM>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0x20000</Size>
               </IROM>
               <XRAM>
                 <Type>0</Type>
@@ -1626,7 +1664,7 @@
               <OCR_RVCT4>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0x20000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
@@ -1651,7 +1689,7 @@
               <OCR_RVCT9>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x2800</Size>
+                <Size>0x4000</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>
@@ -1677,11 +1715,18 @@
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
             <useXO>0</useXO>
+            <v6Lang>1</v6Lang>
+            <v6LangP>1</v6LangP>
+            <vShortEn>1</vShortEn>
+            <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_DEBUGGER USE_BAND_470</Define>
+              <Define>USE_HAL_DRIVER STM32L151xB USE_DEBUGGER USE_BAND_780</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\src;..\..\..\src\boards\SensorNode;..\..\..\src\boards\SensorNode\cmsis;..\..\..\src\boards\mcu\stm32;..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\inc;..\..\..\src\mac;..\..\..\src\peripherals;..\..\..\src\radio;..\..\..\src\system;..\..\..\src\system\crypto</IncludePath>
+              <IncludePath>..\..\..\src;..\..\..\src\boards\SensorNode;..\..\..\src\boards\SensorNode\cmsis;..\..\..\src\boards\mcu\stm32;..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\inc;..\..\..\src\mac;..\..\..\src\peripherals;..\..\..\src\radio;..\..\..\src\system;..\..\..\src\system\crypto</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1694,6 +1739,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -1775,11 +1821,6 @@
               <FilePath>..\..\..\src\boards\SensorNode\sx1276-board.c</FilePath>
             </File>
             <File>
-              <FileName>timer-board.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\SensorNode\timer-board.c</FilePath>
-            </File>
-            <File>
               <FileName>uart-board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\src\boards\SensorNode\uart-board.c</FilePath>
@@ -1790,9 +1831,9 @@
           <GroupName>boards\SensorNode\cmsis</GroupName>
           <Files>
             <File>
-              <FileName>startup_stm32l1xx_md.s</FileName>
+              <FileName>startup_stm32l151xb.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\..\..\src\boards\SensorNode\cmsis\arm-std\startup_stm32l1xx_md.s</FilePath>
+              <FilePath>..\..\..\src\boards\SensorNode\cmsis\arm-std\startup_stm32l151xb.s</FilePath>
             </File>
             <File>
               <FileName>system_stm32l1xx.c</FileName>
@@ -1802,77 +1843,87 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>boards\SensorNode\STM32L1xx_StdPeriph_Driver</GroupName>
+          <GroupName>boards\SensorNode\STM32L1xx_HAL_Driver</GroupName>
           <Files>
             <File>
-              <FileName>misc.c</FileName>
+              <FileName>stm32l1xx_hal.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\misc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_adc.c</FileName>
+              <FileName>stm32l1xx_hal_adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_adc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_dbgmcu.c</FileName>
+              <FileName>stm32l1xx_hal_adc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dbgmcu.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_dma.c</FileName>
+              <FileName>stm32l1xx_hal_cortex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dma.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_cortex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_exti.c</FileName>
+              <FileName>stm32l1xx_hal_dma.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_exti.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_dma.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_gpio.c</FileName>
+              <FileName>stm32l1xx_hal_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_gpio.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_gpio.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_i2c.c</FileName>
+              <FileName>stm32l1xx_hal_i2c.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_i2c.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_i2c.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_pwr.c</FileName>
+              <FileName>stm32l1xx_hal_pwr.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_pwr.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_rcc.c</FileName>
+              <FileName>stm32l1xx_hal_pwr_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rcc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_rtc.c</FileName>
+              <FileName>stm32l1xx_hal_rcc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rtc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_spi.c</FileName>
+              <FileName>stm32l1xx_hal_rcc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_spi.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_syscfg.c</FileName>
+              <FileName>stm32l1xx_hal_rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_syscfg.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_tim.c</FileName>
+              <FileName>stm32l1xx_hal_rtc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_tim.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_usart.c</FileName>
+              <FileName>stm32l1xx_hal_spi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_usart.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_spi_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_uart.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1984,18 +2035,19 @@
       </Groups>
     </Target>
     <Target>
-      <TargetName>tx-cw-470-Bootloader</TargetName>
+      <TargetName>tx-cw-780-Bootloader</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
-          <Device>STM32L151C8</Device>
+          <Device>STM32L151CB</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <Cpu>IRAM(0x20000000-0x200027FF) IROM(0x8000000-0x800FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
+          <Cpu>IRAM(0x20000000-0x20003FFF) IROM(0x8000000-0x801FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile>"STARTUP\ST\STM32L1xx\startup_stm32l1xx_md.s" ("STM32L1xx Medium density Startup Code")</StartupFile>
-          <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL010000)</FlashDriverDll>
-          <DeviceId>5238</DeviceId>
+          <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL020000)</FlashDriverDll>
+          <DeviceId>5244</DeviceId>
           <RegisterFile>stm32l1xx.h</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
@@ -2021,14 +2073,14 @@
             <NotGenerated>0</NotGenerated>
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
-          <OutputDirectory>.\obj\tx-cw-470-Bootloader\</OutputDirectory>
+          <OutputDirectory>.\obj\tx-cw-780-Bootloader\</OutputDirectory>
           <OutputName>tx-cw</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
-          <ListingPath>.\lst\tx-cw-470-Bootloader\</ListingPath>
+          <ListingPath>.\lst\tx-cw-780-Bootloader\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
           <CreateBatchFile>0</CreateBatchFile>
@@ -2059,6 +2111,8 @@
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+            <nStopA1X>0</nStopA1X>
+            <nStopA2X>0</nStopA2X>
           </AfterMake>
           <SelectedForBatchBuild>0</SelectedForBatchBuild>
           <SVCSIdString></SVCSIdString>
@@ -2081,11 +2135,11 @@
         </CommonProperty>
         <DllOption>
           <SimDllName>SARMCM3.DLL</SimDllName>
-          <SimDllArguments> -REMAP -MPU</SimDllArguments>
+          <SimDllArguments>-MPU -REMAP</SimDllArguments>
           <SimDlgDll>DCM.DLL</SimDlgDll>
           <SimDlgDllArguments>-pCM3</SimDlgDllArguments>
           <TargetDllName>SARMCM3.DLL</TargetDllName>
-          <TargetDllArguments> -MPU</TargetDllArguments>
+          <TargetDllArguments>-MPU</TargetDllArguments>
           <TargetDlgDll>TCM.DLL</TargetDlgDll>
           <TargetDlgDllArguments>-pCM3</TargetDlgDllArguments>
         </DllOption>
@@ -2150,7 +2204,7 @@
           </Flash1>
           <bUseTDR>0</bUseTDR>
           <Flash2>STLink\ST-LINKIII-KEIL_SWO.dll</Flash2>
-          <Flash3>"" ()</Flash3>
+          <Flash3></Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -2202,6 +2256,7 @@
             <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
+            <nSecure>0</nSecure>
             <RoSelD>3</RoSelD>
             <RwSelD>3</RwSelD>
             <CodeSel>0</CodeSel>
@@ -2255,12 +2310,12 @@
               <IRAM>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x2800</Size>
+                <Size>0x4000</Size>
               </IRAM>
               <IROM>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0x20000</Size>
               </IROM>
               <XRAM>
                 <Type>0</Type>
@@ -2285,7 +2340,7 @@
               <OCR_RVCT4>
                 <Type>1</Type>
                 <StartAddress>0x8003000</StartAddress>
-                <Size>0xd000</Size>
+                <Size>0x1d000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
@@ -2310,7 +2365,7 @@
               <OCR_RVCT9>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x2800</Size>
+                <Size>0x4000</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>
@@ -2336,11 +2391,18 @@
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
             <useXO>0</useXO>
+            <v6Lang>1</v6Lang>
+            <v6LangP>1</v6LangP>
+            <vShortEn>1</vShortEn>
+            <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_DEBUGGER USE_BAND_470 USE_BOOTLOADER</Define>
+              <Define>USE_HAL_DRIVER STM32L151xB USE_DEBUGGER USE_BAND_780 USE_BOOTLOADER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\src;..\..\..\src\boards\SensorNode;..\..\..\src\boards\SensorNode\cmsis;..\..\..\src\boards\mcu\stm32;..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\inc;..\..\..\src\mac;..\..\..\src\peripherals;..\..\..\src\radio;..\..\..\src\system;..\..\..\src\system\crypto</IncludePath>
+              <IncludePath>..\..\..\src;..\..\..\src\boards\SensorNode;..\..\..\src\boards\SensorNode\cmsis;..\..\..\src\boards\mcu\stm32;..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\inc;..\..\..\src\mac;..\..\..\src\peripherals;..\..\..\src\radio;..\..\..\src\system;..\..\..\src\system\crypto</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -2353,6 +2415,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -2434,11 +2497,6 @@
               <FilePath>..\..\..\src\boards\SensorNode\sx1276-board.c</FilePath>
             </File>
             <File>
-              <FileName>timer-board.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\SensorNode\timer-board.c</FilePath>
-            </File>
-            <File>
               <FileName>uart-board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\src\boards\SensorNode\uart-board.c</FilePath>
@@ -2449,9 +2507,9 @@
           <GroupName>boards\SensorNode\cmsis</GroupName>
           <Files>
             <File>
-              <FileName>startup_stm32l1xx_md.s</FileName>
+              <FileName>startup_stm32l151xb.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\..\..\src\boards\SensorNode\cmsis\arm-std\startup_stm32l1xx_md.s</FilePath>
+              <FilePath>..\..\..\src\boards\SensorNode\cmsis\arm-std\startup_stm32l151xb.s</FilePath>
             </File>
             <File>
               <FileName>system_stm32l1xx.c</FileName>
@@ -2461,77 +2519,87 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>boards\SensorNode\STM32L1xx_StdPeriph_Driver</GroupName>
+          <GroupName>boards\SensorNode\STM32L1xx_HAL_Driver</GroupName>
           <Files>
             <File>
-              <FileName>misc.c</FileName>
+              <FileName>stm32l1xx_hal.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\misc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_adc.c</FileName>
+              <FileName>stm32l1xx_hal_adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_adc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_dbgmcu.c</FileName>
+              <FileName>stm32l1xx_hal_adc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dbgmcu.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_dma.c</FileName>
+              <FileName>stm32l1xx_hal_cortex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dma.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_cortex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_exti.c</FileName>
+              <FileName>stm32l1xx_hal_dma.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_exti.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_dma.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_gpio.c</FileName>
+              <FileName>stm32l1xx_hal_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_gpio.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_gpio.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_i2c.c</FileName>
+              <FileName>stm32l1xx_hal_i2c.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_i2c.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_i2c.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_pwr.c</FileName>
+              <FileName>stm32l1xx_hal_pwr.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_pwr.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_rcc.c</FileName>
+              <FileName>stm32l1xx_hal_pwr_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rcc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_rtc.c</FileName>
+              <FileName>stm32l1xx_hal_rcc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rtc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_spi.c</FileName>
+              <FileName>stm32l1xx_hal_rcc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_spi.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_syscfg.c</FileName>
+              <FileName>stm32l1xx_hal_rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_syscfg.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_tim.c</FileName>
+              <FileName>stm32l1xx_hal_rtc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_tim.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_usart.c</FileName>
+              <FileName>stm32l1xx_hal_spi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_usart.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_spi_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_uart.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2646,15 +2714,16 @@
       <TargetName>tx-cw-868</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
-          <Device>STM32L151C8</Device>
+          <Device>STM32L151CB</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <Cpu>IRAM(0x20000000-0x200027FF) IROM(0x8000000-0x800FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
+          <Cpu>IRAM(0x20000000-0x20003FFF) IROM(0x8000000-0x801FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile>"STARTUP\ST\STM32L1xx\startup_stm32l1xx_md.s" ("STM32L1xx Medium density Startup Code")</StartupFile>
-          <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL010000)</FlashDriverDll>
-          <DeviceId>5238</DeviceId>
+          <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL020000)</FlashDriverDll>
+          <DeviceId>5244</DeviceId>
           <RegisterFile>stm32l1xx.h</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
@@ -2718,6 +2787,8 @@
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+            <nStopA1X>0</nStopA1X>
+            <nStopA2X>0</nStopA2X>
           </AfterMake>
           <SelectedForBatchBuild>0</SelectedForBatchBuild>
           <SVCSIdString></SVCSIdString>
@@ -2740,11 +2811,11 @@
         </CommonProperty>
         <DllOption>
           <SimDllName>SARMCM3.DLL</SimDllName>
-          <SimDllArguments> -REMAP -MPU</SimDllArguments>
+          <SimDllArguments>-MPU -REMAP</SimDllArguments>
           <SimDlgDll>DCM.DLL</SimDlgDll>
           <SimDlgDllArguments>-pCM3</SimDlgDllArguments>
           <TargetDllName>SARMCM3.DLL</TargetDllName>
-          <TargetDllArguments> -MPU</TargetDllArguments>
+          <TargetDllArguments>-MPU</TargetDllArguments>
           <TargetDlgDll>TCM.DLL</TargetDlgDll>
           <TargetDlgDllArguments>-pCM3</TargetDlgDllArguments>
         </DllOption>
@@ -2809,7 +2880,7 @@
           </Flash1>
           <bUseTDR>0</bUseTDR>
           <Flash2>STLink\ST-LINKIII-KEIL_SWO.dll</Flash2>
-          <Flash3>"" ()</Flash3>
+          <Flash3></Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -2861,6 +2932,7 @@
             <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
+            <nSecure>0</nSecure>
             <RoSelD>3</RoSelD>
             <RwSelD>3</RwSelD>
             <CodeSel>0</CodeSel>
@@ -2914,12 +2986,12 @@
               <IRAM>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x2800</Size>
+                <Size>0x4000</Size>
               </IRAM>
               <IROM>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0x20000</Size>
               </IROM>
               <XRAM>
                 <Type>0</Type>
@@ -2944,7 +3016,7 @@
               <OCR_RVCT4>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0x20000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
@@ -2969,7 +3041,7 @@
               <OCR_RVCT9>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x2800</Size>
+                <Size>0x4000</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>
@@ -2995,11 +3067,18 @@
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
             <useXO>0</useXO>
+            <v6Lang>1</v6Lang>
+            <v6LangP>1</v6LangP>
+            <vShortEn>1</vShortEn>
+            <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_DEBUGGER USE_BAND_868</Define>
+              <Define>USE_HAL_DRIVER STM32L151xB USE_DEBUGGER USE_BAND_868</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\src;..\..\..\src\boards\SensorNode;..\..\..\src\boards\SensorNode\cmsis;..\..\..\src\boards\mcu\stm32;..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\inc;..\..\..\src\mac;..\..\..\src\peripherals;..\..\..\src\radio;..\..\..\src\system;..\..\..\src\system\crypto</IncludePath>
+              <IncludePath>..\..\..\src;..\..\..\src\boards\SensorNode;..\..\..\src\boards\SensorNode\cmsis;..\..\..\src\boards\mcu\stm32;..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\inc;..\..\..\src\mac;..\..\..\src\peripherals;..\..\..\src\radio;..\..\..\src\system;..\..\..\src\system\crypto</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -3012,6 +3091,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -3093,11 +3173,6 @@
               <FilePath>..\..\..\src\boards\SensorNode\sx1276-board.c</FilePath>
             </File>
             <File>
-              <FileName>timer-board.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\SensorNode\timer-board.c</FilePath>
-            </File>
-            <File>
               <FileName>uart-board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\src\boards\SensorNode\uart-board.c</FilePath>
@@ -3108,9 +3183,9 @@
           <GroupName>boards\SensorNode\cmsis</GroupName>
           <Files>
             <File>
-              <FileName>startup_stm32l1xx_md.s</FileName>
+              <FileName>startup_stm32l151xb.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\..\..\src\boards\SensorNode\cmsis\arm-std\startup_stm32l1xx_md.s</FilePath>
+              <FilePath>..\..\..\src\boards\SensorNode\cmsis\arm-std\startup_stm32l151xb.s</FilePath>
             </File>
             <File>
               <FileName>system_stm32l1xx.c</FileName>
@@ -3120,77 +3195,87 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>boards\SensorNode\STM32L1xx_StdPeriph_Driver</GroupName>
+          <GroupName>boards\SensorNode\STM32L1xx_HAL_Driver</GroupName>
           <Files>
             <File>
-              <FileName>misc.c</FileName>
+              <FileName>stm32l1xx_hal.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\misc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_adc.c</FileName>
+              <FileName>stm32l1xx_hal_adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_adc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_dbgmcu.c</FileName>
+              <FileName>stm32l1xx_hal_adc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dbgmcu.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_dma.c</FileName>
+              <FileName>stm32l1xx_hal_cortex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dma.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_cortex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_exti.c</FileName>
+              <FileName>stm32l1xx_hal_dma.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_exti.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_dma.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_gpio.c</FileName>
+              <FileName>stm32l1xx_hal_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_gpio.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_gpio.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_i2c.c</FileName>
+              <FileName>stm32l1xx_hal_i2c.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_i2c.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_i2c.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_pwr.c</FileName>
+              <FileName>stm32l1xx_hal_pwr.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_pwr.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_rcc.c</FileName>
+              <FileName>stm32l1xx_hal_pwr_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rcc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_rtc.c</FileName>
+              <FileName>stm32l1xx_hal_rcc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rtc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_spi.c</FileName>
+              <FileName>stm32l1xx_hal_rcc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_spi.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_syscfg.c</FileName>
+              <FileName>stm32l1xx_hal_rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_syscfg.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_tim.c</FileName>
+              <FileName>stm32l1xx_hal_rtc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_tim.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_usart.c</FileName>
+              <FileName>stm32l1xx_hal_spi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_usart.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_spi_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_uart.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -3305,15 +3390,16 @@
       <TargetName>tx-cw-868-Bootloader</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
-          <Device>STM32L151C8</Device>
+          <Device>STM32L151CB</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <Cpu>IRAM(0x20000000-0x200027FF) IROM(0x8000000-0x800FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
+          <Cpu>IRAM(0x20000000-0x20003FFF) IROM(0x8000000-0x801FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile>"STARTUP\ST\STM32L1xx\startup_stm32l1xx_md.s" ("STM32L1xx Medium density Startup Code")</StartupFile>
-          <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL010000)</FlashDriverDll>
-          <DeviceId>5238</DeviceId>
+          <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL020000)</FlashDriverDll>
+          <DeviceId>5244</DeviceId>
           <RegisterFile>stm32l1xx.h</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
@@ -3377,6 +3463,8 @@
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+            <nStopA1X>0</nStopA1X>
+            <nStopA2X>0</nStopA2X>
           </AfterMake>
           <SelectedForBatchBuild>0</SelectedForBatchBuild>
           <SVCSIdString></SVCSIdString>
@@ -3399,11 +3487,11 @@
         </CommonProperty>
         <DllOption>
           <SimDllName>SARMCM3.DLL</SimDllName>
-          <SimDllArguments> -REMAP -MPU</SimDllArguments>
+          <SimDllArguments>-MPU -REMAP</SimDllArguments>
           <SimDlgDll>DCM.DLL</SimDlgDll>
           <SimDlgDllArguments>-pCM3</SimDlgDllArguments>
           <TargetDllName>SARMCM3.DLL</TargetDllName>
-          <TargetDllArguments> -MPU</TargetDllArguments>
+          <TargetDllArguments>-MPU</TargetDllArguments>
           <TargetDlgDll>TCM.DLL</TargetDlgDll>
           <TargetDlgDllArguments>-pCM3</TargetDlgDllArguments>
         </DllOption>
@@ -3468,7 +3556,7 @@
           </Flash1>
           <bUseTDR>0</bUseTDR>
           <Flash2>STLink\ST-LINKIII-KEIL_SWO.dll</Flash2>
-          <Flash3>"" ()</Flash3>
+          <Flash3></Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -3520,6 +3608,7 @@
             <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
+            <nSecure>0</nSecure>
             <RoSelD>3</RoSelD>
             <RwSelD>3</RwSelD>
             <CodeSel>0</CodeSel>
@@ -3573,12 +3662,12 @@
               <IRAM>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x2800</Size>
+                <Size>0x4000</Size>
               </IRAM>
               <IROM>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0x20000</Size>
               </IROM>
               <XRAM>
                 <Type>0</Type>
@@ -3603,7 +3692,7 @@
               <OCR_RVCT4>
                 <Type>1</Type>
                 <StartAddress>0x8003000</StartAddress>
-                <Size>0xd000</Size>
+                <Size>0x1d000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
@@ -3628,7 +3717,7 @@
               <OCR_RVCT9>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x2800</Size>
+                <Size>0x4000</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>
@@ -3654,11 +3743,18 @@
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
             <useXO>0</useXO>
+            <v6Lang>1</v6Lang>
+            <v6LangP>1</v6LangP>
+            <vShortEn>1</vShortEn>
+            <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_DEBUGGER USE_BAND_868 USE_BOOTLOADER</Define>
+              <Define>USE_HAL_DRIVER STM32L151xB USE_DEBUGGER USE_BAND_868 USE_BOOTLOADER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\src;..\..\..\src\boards\SensorNode;..\..\..\src\boards\SensorNode\cmsis;..\..\..\src\boards\mcu\stm32;..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\inc;..\..\..\src\mac;..\..\..\src\peripherals;..\..\..\src\radio;..\..\..\src\system;..\..\..\src\system\crypto</IncludePath>
+              <IncludePath>..\..\..\src;..\..\..\src\boards\SensorNode;..\..\..\src\boards\SensorNode\cmsis;..\..\..\src\boards\mcu\stm32;..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\inc;..\..\..\src\mac;..\..\..\src\peripherals;..\..\..\src\radio;..\..\..\src\system;..\..\..\src\system\crypto</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -3671,6 +3767,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -3752,11 +3849,6 @@
               <FilePath>..\..\..\src\boards\SensorNode\sx1276-board.c</FilePath>
             </File>
             <File>
-              <FileName>timer-board.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\SensorNode\timer-board.c</FilePath>
-            </File>
-            <File>
               <FileName>uart-board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\src\boards\SensorNode\uart-board.c</FilePath>
@@ -3767,9 +3859,9 @@
           <GroupName>boards\SensorNode\cmsis</GroupName>
           <Files>
             <File>
-              <FileName>startup_stm32l1xx_md.s</FileName>
+              <FileName>startup_stm32l151xb.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\..\..\src\boards\SensorNode\cmsis\arm-std\startup_stm32l1xx_md.s</FilePath>
+              <FilePath>..\..\..\src\boards\SensorNode\cmsis\arm-std\startup_stm32l151xb.s</FilePath>
             </File>
             <File>
               <FileName>system_stm32l1xx.c</FileName>
@@ -3779,77 +3871,87 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>boards\SensorNode\STM32L1xx_StdPeriph_Driver</GroupName>
+          <GroupName>boards\SensorNode\STM32L1xx_HAL_Driver</GroupName>
           <Files>
             <File>
-              <FileName>misc.c</FileName>
+              <FileName>stm32l1xx_hal.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\misc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_adc.c</FileName>
+              <FileName>stm32l1xx_hal_adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_adc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_dbgmcu.c</FileName>
+              <FileName>stm32l1xx_hal_adc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dbgmcu.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_dma.c</FileName>
+              <FileName>stm32l1xx_hal_cortex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dma.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_cortex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_exti.c</FileName>
+              <FileName>stm32l1xx_hal_dma.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_exti.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_dma.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_gpio.c</FileName>
+              <FileName>stm32l1xx_hal_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_gpio.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_gpio.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_i2c.c</FileName>
+              <FileName>stm32l1xx_hal_i2c.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_i2c.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_i2c.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_pwr.c</FileName>
+              <FileName>stm32l1xx_hal_pwr.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_pwr.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_rcc.c</FileName>
+              <FileName>stm32l1xx_hal_pwr_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rcc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_rtc.c</FileName>
+              <FileName>stm32l1xx_hal_rcc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rtc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_spi.c</FileName>
+              <FileName>stm32l1xx_hal_rcc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_spi.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_syscfg.c</FileName>
+              <FileName>stm32l1xx_hal_rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_syscfg.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_tim.c</FileName>
+              <FileName>stm32l1xx_hal_rtc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_tim.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_usart.c</FileName>
+              <FileName>stm32l1xx_hal_spi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_usart.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_spi_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_uart.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -3964,15 +4066,16 @@
       <TargetName>tx-cw-915</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
-          <Device>STM32L151C8</Device>
+          <Device>STM32L151CB</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <Cpu>IRAM(0x20000000-0x200027FF) IROM(0x8000000-0x800FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
+          <Cpu>IRAM(0x20000000-0x20003FFF) IROM(0x8000000-0x801FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile>"STARTUP\ST\STM32L1xx\startup_stm32l1xx_md.s" ("STM32L1xx Medium density Startup Code")</StartupFile>
-          <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL010000)</FlashDriverDll>
-          <DeviceId>5238</DeviceId>
+          <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL020000)</FlashDriverDll>
+          <DeviceId>5244</DeviceId>
           <RegisterFile>stm32l1xx.h</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
@@ -4036,6 +4139,8 @@
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+            <nStopA1X>0</nStopA1X>
+            <nStopA2X>0</nStopA2X>
           </AfterMake>
           <SelectedForBatchBuild>0</SelectedForBatchBuild>
           <SVCSIdString></SVCSIdString>
@@ -4058,11 +4163,11 @@
         </CommonProperty>
         <DllOption>
           <SimDllName>SARMCM3.DLL</SimDllName>
-          <SimDllArguments> -REMAP -MPU</SimDllArguments>
+          <SimDllArguments>-MPU -REMAP</SimDllArguments>
           <SimDlgDll>DCM.DLL</SimDlgDll>
           <SimDlgDllArguments>-pCM3</SimDlgDllArguments>
           <TargetDllName>SARMCM3.DLL</TargetDllName>
-          <TargetDllArguments> -MPU</TargetDllArguments>
+          <TargetDllArguments>-MPU</TargetDllArguments>
           <TargetDlgDll>TCM.DLL</TargetDlgDll>
           <TargetDlgDllArguments>-pCM3</TargetDlgDllArguments>
         </DllOption>
@@ -4127,7 +4232,7 @@
           </Flash1>
           <bUseTDR>0</bUseTDR>
           <Flash2>STLink\ST-LINKIII-KEIL_SWO.dll</Flash2>
-          <Flash3>"" ()</Flash3>
+          <Flash3></Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -4179,6 +4284,7 @@
             <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
+            <nSecure>0</nSecure>
             <RoSelD>3</RoSelD>
             <RwSelD>3</RwSelD>
             <CodeSel>0</CodeSel>
@@ -4232,12 +4338,12 @@
               <IRAM>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x2800</Size>
+                <Size>0x4000</Size>
               </IRAM>
               <IROM>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0x20000</Size>
               </IROM>
               <XRAM>
                 <Type>0</Type>
@@ -4262,7 +4368,7 @@
               <OCR_RVCT4>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0x20000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
@@ -4287,7 +4393,7 @@
               <OCR_RVCT9>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x2800</Size>
+                <Size>0x4000</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>
@@ -4313,11 +4419,18 @@
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
             <useXO>0</useXO>
+            <v6Lang>1</v6Lang>
+            <v6LangP>1</v6LangP>
+            <vShortEn>1</vShortEn>
+            <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_DEBUGGER USE_BAND_915</Define>
+              <Define>USE_HAL_DRIVER STM32L151xB USE_DEBUGGER USE_BAND_915</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\src;..\..\..\src\boards\SensorNode;..\..\..\src\boards\SensorNode\cmsis;..\..\..\src\boards\mcu\stm32;..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\inc;..\..\..\src\mac;..\..\..\src\peripherals;..\..\..\src\radio;..\..\..\src\system;..\..\..\src\system\crypto</IncludePath>
+              <IncludePath>..\..\..\src;..\..\..\src\boards\SensorNode;..\..\..\src\boards\SensorNode\cmsis;..\..\..\src\boards\mcu\stm32;..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\inc;..\..\..\src\mac;..\..\..\src\peripherals;..\..\..\src\radio;..\..\..\src\system;..\..\..\src\system\crypto</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -4330,6 +4443,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -4411,11 +4525,6 @@
               <FilePath>..\..\..\src\boards\SensorNode\sx1276-board.c</FilePath>
             </File>
             <File>
-              <FileName>timer-board.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\SensorNode\timer-board.c</FilePath>
-            </File>
-            <File>
               <FileName>uart-board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\src\boards\SensorNode\uart-board.c</FilePath>
@@ -4426,9 +4535,9 @@
           <GroupName>boards\SensorNode\cmsis</GroupName>
           <Files>
             <File>
-              <FileName>startup_stm32l1xx_md.s</FileName>
+              <FileName>startup_stm32l151xb.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\..\..\src\boards\SensorNode\cmsis\arm-std\startup_stm32l1xx_md.s</FilePath>
+              <FilePath>..\..\..\src\boards\SensorNode\cmsis\arm-std\startup_stm32l151xb.s</FilePath>
             </File>
             <File>
               <FileName>system_stm32l1xx.c</FileName>
@@ -4438,77 +4547,87 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>boards\SensorNode\STM32L1xx_StdPeriph_Driver</GroupName>
+          <GroupName>boards\SensorNode\STM32L1xx_HAL_Driver</GroupName>
           <Files>
             <File>
-              <FileName>misc.c</FileName>
+              <FileName>stm32l1xx_hal.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\misc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_adc.c</FileName>
+              <FileName>stm32l1xx_hal_adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_adc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_dbgmcu.c</FileName>
+              <FileName>stm32l1xx_hal_adc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dbgmcu.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_dma.c</FileName>
+              <FileName>stm32l1xx_hal_cortex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dma.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_cortex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_exti.c</FileName>
+              <FileName>stm32l1xx_hal_dma.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_exti.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_dma.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_gpio.c</FileName>
+              <FileName>stm32l1xx_hal_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_gpio.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_gpio.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_i2c.c</FileName>
+              <FileName>stm32l1xx_hal_i2c.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_i2c.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_i2c.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_pwr.c</FileName>
+              <FileName>stm32l1xx_hal_pwr.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_pwr.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_rcc.c</FileName>
+              <FileName>stm32l1xx_hal_pwr_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rcc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_rtc.c</FileName>
+              <FileName>stm32l1xx_hal_rcc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rtc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_spi.c</FileName>
+              <FileName>stm32l1xx_hal_rcc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_spi.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_syscfg.c</FileName>
+              <FileName>stm32l1xx_hal_rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_syscfg.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_tim.c</FileName>
+              <FileName>stm32l1xx_hal_rtc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_tim.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_usart.c</FileName>
+              <FileName>stm32l1xx_hal_spi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_usart.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_spi_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_uart.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -4623,15 +4742,16 @@
       <TargetName>tx-cw-915-Bootloader</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
-          <Device>STM32L151C8</Device>
+          <Device>STM32L151CB</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <Cpu>IRAM(0x20000000-0x200027FF) IROM(0x8000000-0x800FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
+          <Cpu>IRAM(0x20000000-0x20003FFF) IROM(0x8000000-0x801FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile>"STARTUP\ST\STM32L1xx\startup_stm32l1xx_md.s" ("STM32L1xx Medium density Startup Code")</StartupFile>
-          <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL010000)</FlashDriverDll>
-          <DeviceId>5238</DeviceId>
+          <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL020000)</FlashDriverDll>
+          <DeviceId>5244</DeviceId>
           <RegisterFile>stm32l1xx.h</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
@@ -4695,6 +4815,8 @@
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+            <nStopA1X>0</nStopA1X>
+            <nStopA2X>0</nStopA2X>
           </AfterMake>
           <SelectedForBatchBuild>0</SelectedForBatchBuild>
           <SVCSIdString></SVCSIdString>
@@ -4717,11 +4839,11 @@
         </CommonProperty>
         <DllOption>
           <SimDllName>SARMCM3.DLL</SimDllName>
-          <SimDllArguments> -REMAP -MPU</SimDllArguments>
+          <SimDllArguments>-MPU -REMAP</SimDllArguments>
           <SimDlgDll>DCM.DLL</SimDlgDll>
           <SimDlgDllArguments>-pCM3</SimDlgDllArguments>
           <TargetDllName>SARMCM3.DLL</TargetDllName>
-          <TargetDllArguments> -MPU</TargetDllArguments>
+          <TargetDllArguments>-MPU</TargetDllArguments>
           <TargetDlgDll>TCM.DLL</TargetDlgDll>
           <TargetDlgDllArguments>-pCM3</TargetDlgDllArguments>
         </DllOption>
@@ -4786,7 +4908,7 @@
           </Flash1>
           <bUseTDR>0</bUseTDR>
           <Flash2>STLink\ST-LINKIII-KEIL_SWO.dll</Flash2>
-          <Flash3>"" ()</Flash3>
+          <Flash3></Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -4838,6 +4960,7 @@
             <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
+            <nSecure>0</nSecure>
             <RoSelD>3</RoSelD>
             <RwSelD>3</RwSelD>
             <CodeSel>0</CodeSel>
@@ -4891,12 +5014,12 @@
               <IRAM>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x2800</Size>
+                <Size>0x4000</Size>
               </IRAM>
               <IROM>
                 <Type>1</Type>
                 <StartAddress>0x8000000</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0x20000</Size>
               </IROM>
               <XRAM>
                 <Type>0</Type>
@@ -4921,7 +5044,7 @@
               <OCR_RVCT4>
                 <Type>1</Type>
                 <StartAddress>0x8003000</StartAddress>
-                <Size>0xd000</Size>
+                <Size>0x1d000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
@@ -4946,7 +5069,7 @@
               <OCR_RVCT9>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x2800</Size>
+                <Size>0x4000</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>
@@ -4972,11 +5095,18 @@
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
             <useXO>0</useXO>
+            <v6Lang>1</v6Lang>
+            <v6LangP>1</v6LangP>
+            <vShortEn>1</vShortEn>
+            <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_DEBUGGER USE_BAND_915 USE_BOOTLOADER</Define>
+              <Define>USE_HAL_DRIVER STM32L151xB USE_DEBUGGER USE_BAND_915 USE_BOOTLOADER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\src;..\..\..\src\boards\SensorNode;..\..\..\src\boards\SensorNode\cmsis;..\..\..\src\boards\mcu\stm32;..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\inc;..\..\..\src\mac;..\..\..\src\peripherals;..\..\..\src\radio;..\..\..\src\system;..\..\..\src\system\crypto</IncludePath>
+              <IncludePath>..\..\..\src;..\..\..\src\boards\SensorNode;..\..\..\src\boards\SensorNode\cmsis;..\..\..\src\boards\mcu\stm32;..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\inc;..\..\..\src\mac;..\..\..\src\peripherals;..\..\..\src\radio;..\..\..\src\system;..\..\..\src\system\crypto</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -4989,6 +5119,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -5070,11 +5201,6 @@
               <FilePath>..\..\..\src\boards\SensorNode\sx1276-board.c</FilePath>
             </File>
             <File>
-              <FileName>timer-board.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\SensorNode\timer-board.c</FilePath>
-            </File>
-            <File>
               <FileName>uart-board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\src\boards\SensorNode\uart-board.c</FilePath>
@@ -5085,9 +5211,9 @@
           <GroupName>boards\SensorNode\cmsis</GroupName>
           <Files>
             <File>
-              <FileName>startup_stm32l1xx_md.s</FileName>
+              <FileName>startup_stm32l151xb.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\..\..\src\boards\SensorNode\cmsis\arm-std\startup_stm32l1xx_md.s</FilePath>
+              <FilePath>..\..\..\src\boards\SensorNode\cmsis\arm-std\startup_stm32l151xb.s</FilePath>
             </File>
             <File>
               <FileName>system_stm32l1xx.c</FileName>
@@ -5097,77 +5223,87 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>boards\SensorNode\STM32L1xx_StdPeriph_Driver</GroupName>
+          <GroupName>boards\SensorNode\STM32L1xx_HAL_Driver</GroupName>
           <Files>
             <File>
-              <FileName>misc.c</FileName>
+              <FileName>stm32l1xx_hal.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\misc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_adc.c</FileName>
+              <FileName>stm32l1xx_hal_adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_adc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_dbgmcu.c</FileName>
+              <FileName>stm32l1xx_hal_adc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dbgmcu.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_dma.c</FileName>
+              <FileName>stm32l1xx_hal_cortex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dma.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_cortex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_exti.c</FileName>
+              <FileName>stm32l1xx_hal_dma.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_exti.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_dma.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_gpio.c</FileName>
+              <FileName>stm32l1xx_hal_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_gpio.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_gpio.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_i2c.c</FileName>
+              <FileName>stm32l1xx_hal_i2c.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_i2c.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_i2c.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_pwr.c</FileName>
+              <FileName>stm32l1xx_hal_pwr.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_pwr.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_rcc.c</FileName>
+              <FileName>stm32l1xx_hal_pwr_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rcc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_rtc.c</FileName>
+              <FileName>stm32l1xx_hal_rcc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rtc.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_spi.c</FileName>
+              <FileName>stm32l1xx_hal_rcc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_spi.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_syscfg.c</FileName>
+              <FileName>stm32l1xx_hal_rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_syscfg.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_tim.c</FileName>
+              <FileName>stm32l1xx_hal_rtc_ex.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_tim.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l1xx_usart.c</FileName>
+              <FileName>stm32l1xx_hal_spi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_usart.c</FilePath>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_spi_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_uart.c</FilePath>
             </File>
           </Files>
         </Group>

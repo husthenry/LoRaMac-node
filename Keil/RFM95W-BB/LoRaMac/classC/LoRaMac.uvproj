@@ -10,16 +10,26 @@
       <TargetName>LoRaMac-433</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
       <pCCUsed>5060020::V5.06 (build 20)::ARMCC</pCCUsed>
+=======
+      <pCCUsed>5060300::V5.06 update 3 (build 300)::ARMCC</pCCUsed>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32L151C8</Device>
           <Vendor>STMicroelectronics</Vendor>
           <Cpu>IRAM(0x20000000-0x2000BFFF) IROM(0x8000000-0x805FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
           <StartupFile>"STARTUP\ST\STM32L1xx\startup_stm32l1xx_hd.s" ("STM32L1xx High density Startup Code")</StartupFile>
           <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_384 -FS08000000 -FL060000)</FlashDriverDll>
           <DeviceId>6516</DeviceId>
+=======
+          <StartupFile>"STARTUP\ST\STM32L1xx\startup_stm32l151xb.s" ("STM32L1xx Medium density Startup Code")</StartupFile>
+          <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL020000)</FlashDriverDll>
+          <DeviceId>5244</DeviceId>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
           <RegisterFile>stm32l1xx.h</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
@@ -363,6 +373,7 @@
             <uSurpInc>1</uSurpInc>
             <uC99>1</uC99>
             <useXO>0</useXO>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
             <v6Lang>0</v6Lang>
             <v6LangP>0</v6LangP>
             <vShortEn>0</vShortEn>
@@ -372,6 +383,20 @@
               <Define>USE_DEBUGGER LOW_POWER_MODE_ENABLE USE_BAND_433 USE_USB_CDC</Define>
               <Undefine></Undefine>
               <IncludePath>..\..\..\..\src;..\..\..\..\src\boards\RFM95W-BB;..\..\..\..\src\boards\RFM95W-BB\cmsis;..\..\..\..\src\boards\mcu\stm32;..\..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\inc;..\..\..\..\src\mac;..\..\..\..\src\peripherals;..\..\..\..\src\radio;..\..\..\..\src\system;..\..\..\..\src\system\crypto;..\..\..\..\src\boards\mcu\stm32\STM32_USB-FS-Device_Driver\inc;..\..\..\..\src\boards\RFM95W-BB\usb\cdc\inc</IncludePath>
+=======
+            <v6Lang>1</v6Lang>
+            <v6LangP>1</v6LangP>
+            <vShortEn>1</vShortEn>
+            <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
+            <VariousControls>
+              <MiscControls></MiscControls>
+              <Define>USE_HAL_DRIVER STM32L151xB USE_DEBUGGER USE_BAND_868 USE_MODEM_LORA</Define>
+              <Undefine></Undefine>
+              <IncludePath>..\..\..\src;..\..\..\src\boards\LoRaMote;..\..\..\src\boards\LoRaMote\cmsis;..\..\..\src\boards\mcu\stm32;..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\inc;..\..\..\src\mac;..\..\..\src\peripherals;..\..\..\src\radio;..\..\..\src\system;..\..\..\src\system\crypto</IncludePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </VariousControls>
           </Cads>
           <Aads>
@@ -384,6 +409,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -470,11 +496,14 @@
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\sx1276-board.c</FilePath>
             </File>
             <File>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FileName>timer-board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\timer-board.c</FilePath>
             </File>
             <File>
+=======
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
               <FileName>uart-board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\uart-board.c</FilePath>
@@ -485,9 +514,13 @@
           <GroupName>boards\RFM95W-BB\cmsis</GroupName>
           <Files>
             <File>
-              <FileName>startup_stm32l1xx_md.s</FileName>
+              <FileName>startup_stm32l151xb.s</FileName>
               <FileType>2</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\cmsis\arm-std\startup_stm32l1xx_md.s</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\LoRaMote\cmsis\arm-std\startup_stm32l151xb.s</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
               <FileName>system_stm32l1xx.c</FileName>
@@ -522,77 +555,157 @@
           </Files>
         </Group>
         <Group>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
           <GroupName>boards\mcu\STM32L1xx_StdPeriph_Driver</GroupName>
+=======
+          <GroupName>boards\LoRaMote\STM32L1xx_HAL_Driver</GroupName>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
           <Files>
             <File>
-              <FileName>misc.c</FileName>
+              <FileName>stm32l1xx_hal.c</FileName>
               <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_adc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_cortex.c</FileName>
+              <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\misc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_cortex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_adc.c</FileName>
+              <FileName>stm32l1xx_hal_dma.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_adc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_dma.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_dbgmcu.c</FileName>
+              <FileName>stm32l1xx_hal_gpio.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dbgmcu.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_gpio.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_dma.c</FileName>
+              <FileName>stm32l1xx_hal_i2c.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dma.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_i2c.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_exti.c</FileName>
+              <FileName>stm32l1xx_hal_pcd.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_exti.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pcd.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_gpio.c</FileName>
+              <FileName>stm32l1xx_hal_pcd_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_gpio.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pcd_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_i2c.c</FileName>
+              <FileName>stm32l1xx_hal_pwr.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_i2c.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_pwr.c</FileName>
+              <FileName>stm32l1xx_hal_pwr_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_pwr.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_rcc.c</FileName>
+              <FileName>stm32l1xx_hal_rcc.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rcc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_rtc.c</FileName>
+              <FileName>stm32l1xx_hal_rcc_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rtc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_spi.c</FileName>
+              <FileName>stm32l1xx_hal_rtc.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_spi.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_syscfg.c</FileName>
+              <FileName>stm32l1xx_hal_rtc_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_syscfg.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_tim.c</FileName>
+              <FileName>stm32l1xx_hal_spi.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_tim.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_usart.c</FileName>
+              <FileName>stm32l1xx_hal_spi_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_usart.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_uart.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
           </Files>
         </Group>
@@ -737,14 +850,18 @@
       <TargetName>LoRaMac-433-Bootloader</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
       <pCCUsed>5060020::V5.06 (build 20)::ARMCC</pCCUsed>
+=======
+      <pCCUsed>5060300::V5.06 update 3 (build 300)::ARMCC</pCCUsed>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32L151C8</Device>
           <Vendor>STMicroelectronics</Vendor>
           <Cpu>IRAM(0x20000000-0x20003FFF) IROM(0x8000000-0x801FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
-          <StartupFile>"STARTUP\ST\STM32L1xx\startup_stm32l1xx_md.s" ("STM32L1xx Medium density Startup Code")</StartupFile>
+          <StartupFile>"STARTUP\ST\STM32L1xx\startup_stm32l151xb.s" ("STM32L1xx Medium density Startup Code")</StartupFile>
           <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL020000)</FlashDriverDll>
           <DeviceId>5244</DeviceId>
           <RegisterFile>stm32l1xx.h</RegisterFile>
@@ -1090,6 +1207,7 @@
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
             <useXO>0</useXO>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
             <v6Lang>0</v6Lang>
             <v6LangP>0</v6LangP>
             <vShortEn>0</vShortEn>
@@ -1099,6 +1217,20 @@
               <Define>USE_DEBUGGER LOW_POWER_MODE_ENABLE USE_BAND_433 USE_BOOTLOADER</Define>
               <Undefine></Undefine>
               <IncludePath>..\..\..\..\src;..\..\..\..\src\boards\SensorNode;..\..\..\..\src\boards\SensorNode\cmsis;..\..\..\..\src\boards\mcu\stm32;..\..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\inc;..\..\..\..\src\mac;..\..\..\..\src\peripherals;..\..\..\..\src\radio;..\..\..\..\src\system;..\..\..\..\src\system\crypto</IncludePath>
+=======
+            <v6Lang>1</v6Lang>
+            <v6LangP>1</v6LangP>
+            <vShortEn>1</vShortEn>
+            <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
+            <VariousControls>
+              <MiscControls></MiscControls>
+              <Define>USE_HAL_DRIVER STM32L151xB USE_DEBUGGER USE_BAND_868 USE_MODEM_FSK</Define>
+              <Undefine></Undefine>
+              <IncludePath>..\..\..\src;..\..\..\src\boards\LoRaMote;..\..\..\src\boards\LoRaMote\cmsis;..\..\..\src\boards\mcu\stm32;..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\inc;..\..\..\src\mac;..\..\..\src\peripherals;..\..\..\src\radio;..\..\..\src\system;..\..\..\src\system\crypto</IncludePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </VariousControls>
           </Cads>
           <Aads>
@@ -1111,6 +1243,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -1197,11 +1330,14 @@
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\sx1276-board.c</FilePath>
             </File>
             <File>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FileName>timer-board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\timer-board.c</FilePath>
             </File>
             <File>
+=======
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
               <FileName>uart-board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\uart-board.c</FilePath>
@@ -1212,9 +1348,13 @@
           <GroupName>boards\RFM95W-BB\cmsis</GroupName>
           <Files>
             <File>
-              <FileName>startup_stm32l1xx_md.s</FileName>
+              <FileName>startup_stm32l151xb.s</FileName>
               <FileType>2</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\cmsis\arm-std\startup_stm32l1xx_md.s</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\LoRaMote\cmsis\arm-std\startup_stm32l151xb.s</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
               <FileName>system_stm32l1xx.c</FileName>
@@ -1249,77 +1389,157 @@
           </Files>
         </Group>
         <Group>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
           <GroupName>boards\mcu\STM32L1xx_StdPeriph_Driver</GroupName>
+=======
+          <GroupName>boards\LoRaMote\STM32L1xx_HAL_Driver</GroupName>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
           <Files>
             <File>
-              <FileName>misc.c</FileName>
+              <FileName>stm32l1xx_hal.c</FileName>
               <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_adc_ex.c</FileName>
+              <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\misc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_adc.c</FileName>
+              <FileName>stm32l1xx_hal_cortex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_adc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_cortex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_dbgmcu.c</FileName>
+              <FileName>stm32l1xx_hal_dma.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dbgmcu.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_dma.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_dma.c</FileName>
+              <FileName>stm32l1xx_hal_gpio.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dma.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_gpio.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_exti.c</FileName>
+              <FileName>stm32l1xx_hal_i2c.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_exti.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_i2c.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_gpio.c</FileName>
+              <FileName>stm32l1xx_hal_pcd.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_gpio.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pcd.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_i2c.c</FileName>
+              <FileName>stm32l1xx_hal_pcd_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_i2c.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pcd_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_pwr.c</FileName>
+              <FileName>stm32l1xx_hal_pwr.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_pwr.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_rcc.c</FileName>
+              <FileName>stm32l1xx_hal_pwr_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rcc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_rtc.c</FileName>
+              <FileName>stm32l1xx_hal_rcc.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rtc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_spi.c</FileName>
+              <FileName>stm32l1xx_hal_rcc_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_spi.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_syscfg.c</FileName>
+              <FileName>stm32l1xx_hal_rtc.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_syscfg.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_tim.c</FileName>
+              <FileName>stm32l1xx_hal_rtc_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_tim.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_usart.c</FileName>
+              <FileName>stm32l1xx_hal_spi.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_usart.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_spi_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_uart.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
           </Files>
         </Group>
@@ -1464,15 +1684,22 @@
       <TargetName>LoRaMac-470</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060300::V5.06 update 3 (build 300)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32L151C8</Device>
           <Vendor>STMicroelectronics</Vendor>
           <Cpu>IRAM(0x20000000-0x2000BFFF) IROM(0x8000000-0x805FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
           <StartupFile>"STARTUP\ST\STM32L1xx\startup_stm32l1xx_hd.s" ("STM32L1xx High density Startup Code")</StartupFile>
           <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_384 -FS08000000 -FL060000)</FlashDriverDll>
           <DeviceId>6516</DeviceId>
+=======
+          <StartupFile>"STARTUP\ST\STM32L1xx\startup_stm32l151xb.s" ("STM32L1xx Medium density Startup Code")</StartupFile>
+          <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL020000)</FlashDriverDll>
+          <DeviceId>5244</DeviceId>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
           <RegisterFile>stm32l1xx.h</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
@@ -1816,6 +2043,7 @@
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
             <useXO>0</useXO>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
             <v6Lang>0</v6Lang>
             <v6LangP>0</v6LangP>
             <vShortEn>0</vShortEn>
@@ -1825,6 +2053,20 @@
               <Define>USE_DEBUGGER LOW_POWER_MODE_ENABLE USE_BAND_470</Define>
               <Undefine></Undefine>
               <IncludePath>..\..\..\..\src;..\..\..\..\src\boards\SensorNode;..\..\..\..\src\boards\SensorNode\cmsis;..\..\..\..\src\boards\mcu\stm32;..\..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\inc;..\..\..\..\src\mac;..\..\..\..\src\peripherals;..\..\..\..\src\radio;..\..\..\..\src\system;..\..\..\..\src\system\crypto</IncludePath>
+=======
+            <v6Lang>1</v6Lang>
+            <v6LangP>1</v6LangP>
+            <vShortEn>1</vShortEn>
+            <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
+            <VariousControls>
+              <MiscControls></MiscControls>
+              <Define>USE_HAL_DRIVER STM32L151xB USE_DEBUGGER USE_BAND_868 USE_MODEM_LORA USE_BOOTLOADER</Define>
+              <Undefine></Undefine>
+              <IncludePath>..\..\..\src;..\..\..\src\boards\LoRaMote;..\..\..\src\boards\LoRaMote\cmsis;..\..\..\src\boards\mcu\stm32;..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\inc;..\..\..\src\mac;..\..\..\src\peripherals;..\..\..\src\radio;..\..\..\src\system;..\..\..\src\system\crypto</IncludePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </VariousControls>
           </Cads>
           <Aads>
@@ -1837,6 +2079,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -1923,11 +2166,14 @@
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\sx1276-board.c</FilePath>
             </File>
             <File>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FileName>timer-board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\timer-board.c</FilePath>
             </File>
             <File>
+=======
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
               <FileName>uart-board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\uart-board.c</FilePath>
@@ -1938,9 +2184,13 @@
           <GroupName>boards\RFM95W-BB\cmsis</GroupName>
           <Files>
             <File>
-              <FileName>startup_stm32l1xx_md.s</FileName>
+              <FileName>startup_stm32l151xb.s</FileName>
               <FileType>2</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\cmsis\arm-std\startup_stm32l1xx_md.s</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\LoRaMote\cmsis\arm-std\startup_stm32l151xb.s</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
               <FileName>system_stm32l1xx.c</FileName>
@@ -1975,77 +2225,157 @@
           </Files>
         </Group>
         <Group>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
           <GroupName>boards\mcu\STM32L1xx_StdPeriph_Driver</GroupName>
+=======
+          <GroupName>boards\LoRaMote\STM32L1xx_HAL_Driver</GroupName>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
           <Files>
             <File>
-              <FileName>misc.c</FileName>
+              <FileName>stm32l1xx_hal.c</FileName>
               <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_adc_ex.c</FileName>
+              <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\misc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_adc.c</FileName>
+              <FileName>stm32l1xx_hal_cortex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_adc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_cortex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_dbgmcu.c</FileName>
+              <FileName>stm32l1xx_hal_dma.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dbgmcu.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_dma.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_dma.c</FileName>
+              <FileName>stm32l1xx_hal_gpio.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dma.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_gpio.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_exti.c</FileName>
+              <FileName>stm32l1xx_hal_i2c.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_exti.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_i2c.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_gpio.c</FileName>
+              <FileName>stm32l1xx_hal_pcd.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_gpio.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pcd.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_i2c.c</FileName>
+              <FileName>stm32l1xx_hal_pcd_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_i2c.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pcd_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_pwr.c</FileName>
+              <FileName>stm32l1xx_hal_pwr.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_pwr.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_rcc.c</FileName>
+              <FileName>stm32l1xx_hal_pwr_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rcc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_rtc.c</FileName>
+              <FileName>stm32l1xx_hal_rcc.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rtc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_spi.c</FileName>
+              <FileName>stm32l1xx_hal_rcc_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_spi.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_syscfg.c</FileName>
+              <FileName>stm32l1xx_hal_rtc.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_syscfg.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_tim.c</FileName>
+              <FileName>stm32l1xx_hal_rtc_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_tim.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_usart.c</FileName>
+              <FileName>stm32l1xx_hal_spi.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_usart.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_spi_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_uart.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
           </Files>
         </Group>
@@ -2190,13 +2520,14 @@
       <TargetName>LoRaMac-470-Bootloader</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060300::V5.06 update 3 (build 300)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32L151C8</Device>
           <Vendor>STMicroelectronics</Vendor>
           <Cpu>IRAM(0x20000000-0x20003FFF) IROM(0x8000000-0x801FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
-          <StartupFile>"STARTUP\ST\STM32L1xx\startup_stm32l1xx_md.s" ("STM32L1xx Medium density Startup Code")</StartupFile>
+          <StartupFile>"STARTUP\ST\STM32L1xx\startup_stm32l151xb.s" ("STM32L1xx Medium density Startup Code")</StartupFile>
           <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL020000)</FlashDriverDll>
           <DeviceId>5244</DeviceId>
           <RegisterFile>stm32l1xx.h</RegisterFile>
@@ -2542,6 +2873,7 @@
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
             <useXO>0</useXO>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
             <v6Lang>0</v6Lang>
             <v6LangP>0</v6LangP>
             <vShortEn>0</vShortEn>
@@ -2551,6 +2883,20 @@
               <Define>USE_DEBUGGER LOW_POWER_MODE_ENABLE USE_BAND_470 USE_BOOTLOADER</Define>
               <Undefine></Undefine>
               <IncludePath>..\..\..\..\src;..\..\..\..\src\boards\SensorNode;..\..\..\..\src\boards\SensorNode\cmsis;..\..\..\..\src\boards\mcu\stm32;..\..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\inc;..\..\..\..\src\mac;..\..\..\..\src\peripherals;..\..\..\..\src\radio;..\..\..\..\src\system;..\..\..\..\src\system\crypto</IncludePath>
+=======
+            <v6Lang>1</v6Lang>
+            <v6LangP>1</v6LangP>
+            <vShortEn>1</vShortEn>
+            <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
+            <VariousControls>
+              <MiscControls></MiscControls>
+              <Define>USE_HAL_DRIVER STM32L151xB USE_DEBUGGER USE_BAND_868 USE_MODEM_FSK USE_BOOTLOADER</Define>
+              <Undefine></Undefine>
+              <IncludePath>..\..\..\src;..\..\..\src\boards\LoRaMote;..\..\..\src\boards\LoRaMote\cmsis;..\..\..\src\boards\mcu\stm32;..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\inc;..\..\..\src\mac;..\..\..\src\peripherals;..\..\..\src\radio;..\..\..\src\system;..\..\..\src\system\crypto</IncludePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </VariousControls>
           </Cads>
           <Aads>
@@ -2563,6 +2909,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -2649,11 +2996,14 @@
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\sx1276-board.c</FilePath>
             </File>
             <File>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FileName>timer-board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\timer-board.c</FilePath>
             </File>
             <File>
+=======
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
               <FileName>uart-board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\uart-board.c</FilePath>
@@ -2664,9 +3014,13 @@
           <GroupName>boards\RFM95W-BB\cmsis</GroupName>
           <Files>
             <File>
-              <FileName>startup_stm32l1xx_md.s</FileName>
+              <FileName>startup_stm32l151xb.s</FileName>
               <FileType>2</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\cmsis\arm-std\startup_stm32l1xx_md.s</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\LoRaMote\cmsis\arm-std\startup_stm32l151xb.s</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
               <FileName>system_stm32l1xx.c</FileName>
@@ -2701,77 +3055,157 @@
           </Files>
         </Group>
         <Group>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
           <GroupName>boards\mcu\STM32L1xx_StdPeriph_Driver</GroupName>
+=======
+          <GroupName>boards\LoRaMote\STM32L1xx_HAL_Driver</GroupName>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
           <Files>
             <File>
-              <FileName>misc.c</FileName>
+              <FileName>stm32l1xx_hal.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\misc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_adc.c</FileName>
+              <FileName>stm32l1xx_hal_adc.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_adc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_dbgmcu.c</FileName>
+              <FileName>stm32l1xx_hal_adc_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dbgmcu.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_dma.c</FileName>
+              <FileName>stm32l1xx_hal_cortex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dma.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_cortex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_exti.c</FileName>
+              <FileName>stm32l1xx_hal_dma.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_exti.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_dma.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_gpio.c</FileName>
+              <FileName>stm32l1xx_hal_gpio.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_gpio.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_gpio.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_i2c.c</FileName>
+              <FileName>stm32l1xx_hal_i2c.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_i2c.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_i2c.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_pwr.c</FileName>
+              <FileName>stm32l1xx_hal_pcd.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_pwr.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pcd.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_rcc.c</FileName>
+              <FileName>stm32l1xx_hal_pcd_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rcc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pcd_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_rtc.c</FileName>
+              <FileName>stm32l1xx_hal_pwr.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rtc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_spi.c</FileName>
+              <FileName>stm32l1xx_hal_pwr_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_spi.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_syscfg.c</FileName>
+              <FileName>stm32l1xx_hal_rcc.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_syscfg.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_tim.c</FileName>
+              <FileName>stm32l1xx_hal_rcc_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_tim.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_usart.c</FileName>
+              <FileName>stm32l1xx_hal_rtc.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_usart.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_rtc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_spi_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_uart.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
           </Files>
         </Group>
@@ -2916,13 +3350,14 @@
       <TargetName>LoRaMac-868</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060300::V5.06 update 3 (build 300)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32L151C8</Device>
           <Vendor>STMicroelectronics</Vendor>
           <Cpu>IRAM(0x20000000-0x20003FFF) IROM(0x8000000-0x801FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
-          <StartupFile>"STARTUP\ST\STM32L1xx\startup_stm32l1xx_md.s" ("STM32L1xx Medium density Startup Code")</StartupFile>
+          <StartupFile>"STARTUP\ST\STM32L1xx\startup_stm32l151xb.s" ("STM32L1xx Medium density Startup Code")</StartupFile>
           <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL020000)</FlashDriverDll>
           <DeviceId>5244</DeviceId>
           <RegisterFile>stm32l1xx.h</RegisterFile>
@@ -3268,6 +3703,7 @@
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
             <useXO>0</useXO>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
             <v6Lang>0</v6Lang>
             <v6LangP>0</v6LangP>
             <vShortEn>0</vShortEn>
@@ -3277,6 +3713,20 @@
               <Define>USE_DEBUGGER LOW_POWER_MODE_ENABLE USE_BAND_868</Define>
               <Undefine></Undefine>
               <IncludePath>..\..\..\..\src;..\..\..\..\src\boards\SensorNode;..\..\..\..\src\boards\SensorNode\cmsis;..\..\..\..\src\boards\mcu\stm32;..\..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\inc;..\..\..\..\src\mac;..\..\..\..\src\peripherals;..\..\..\..\src\radio;..\..\..\..\src\system;..\..\..\..\src\system\crypto</IncludePath>
+=======
+            <v6Lang>1</v6Lang>
+            <v6LangP>1</v6LangP>
+            <vShortEn>1</vShortEn>
+            <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
+            <VariousControls>
+              <MiscControls></MiscControls>
+              <Define>USE_HAL_DRIVER STM32L151xB USE_DEBUGGER USE_BAND_915 USE_MODEM_LORA</Define>
+              <Undefine></Undefine>
+              <IncludePath>..\..\..\src;..\..\..\src\boards\LoRaMote;..\..\..\src\boards\LoRaMote\cmsis;..\..\..\src\boards\mcu\stm32;..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\inc;..\..\..\src\mac;..\..\..\src\peripherals;..\..\..\src\radio;..\..\..\src\system;..\..\..\src\system\crypto</IncludePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </VariousControls>
           </Cads>
           <Aads>
@@ -3289,6 +3739,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -3375,11 +3826,14 @@
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\sx1276-board.c</FilePath>
             </File>
             <File>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FileName>timer-board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\timer-board.c</FilePath>
             </File>
             <File>
+=======
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
               <FileName>uart-board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\uart-board.c</FilePath>
@@ -3390,9 +3844,13 @@
           <GroupName>boards\RFM95W-BB\cmsis</GroupName>
           <Files>
             <File>
-              <FileName>startup_stm32l1xx_md.s</FileName>
+              <FileName>startup_stm32l151xb.s</FileName>
               <FileType>2</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\cmsis\arm-std\startup_stm32l1xx_md.s</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\LoRaMote\cmsis\arm-std\startup_stm32l151xb.s</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
               <FileName>system_stm32l1xx.c</FileName>
@@ -3402,6 +3860,7 @@
           </Files>
         </Group>
         <Group>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
           <GroupName>boards\RFM95W-BB\usb\cdc</GroupName>
           <Files>
             <File>
@@ -3428,76 +3887,155 @@
         </Group>
         <Group>
           <GroupName>boards\mcu\STM32L1xx_StdPeriph_Driver</GroupName>
+=======
+          <GroupName>boards\LoRaMote\STM32L1xx_HAL_Driver</GroupName>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
           <Files>
             <File>
-              <FileName>misc.c</FileName>
+              <FileName>stm32l1xx_hal.c</FileName>
               <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_adc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_cortex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_cortex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_dma.c</FileName>
+              <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\misc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_dma.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_adc.c</FileName>
+              <FileName>stm32l1xx_hal_gpio.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_adc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_gpio.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_dbgmcu.c</FileName>
+              <FileName>stm32l1xx_hal_i2c.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dbgmcu.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_i2c.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_dma.c</FileName>
+              <FileName>stm32l1xx_hal_pcd.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dma.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pcd.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_exti.c</FileName>
+              <FileName>stm32l1xx_hal_pcd_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_exti.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pcd_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_gpio.c</FileName>
+              <FileName>stm32l1xx_hal_pwr.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_gpio.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_i2c.c</FileName>
+              <FileName>stm32l1xx_hal_pwr_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_i2c.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_pwr.c</FileName>
+              <FileName>stm32l1xx_hal_rcc.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_pwr.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_rcc.c</FileName>
+              <FileName>stm32l1xx_hal_rcc_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rcc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_rtc.c</FileName>
+              <FileName>stm32l1xx_hal_rtc.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rtc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_spi.c</FileName>
+              <FileName>stm32l1xx_hal_rtc_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_spi.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_syscfg.c</FileName>
+              <FileName>stm32l1xx_hal_spi.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_syscfg.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_tim.c</FileName>
+              <FileName>stm32l1xx_hal_spi_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_tim.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_usart.c</FileName>
+              <FileName>stm32l1xx_hal_uart.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_usart.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_uart.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
           </Files>
         </Group>
@@ -3642,13 +4180,14 @@
       <TargetName>LoRaMac-868-Bootloader</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060300::V5.06 update 3 (build 300)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32L151C8</Device>
           <Vendor>STMicroelectronics</Vendor>
           <Cpu>IRAM(0x20000000-0x20003FFF) IROM(0x8000000-0x801FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
-          <StartupFile>"STARTUP\ST\STM32L1xx\startup_stm32l1xx_md.s" ("STM32L1xx Medium density Startup Code")</StartupFile>
+          <StartupFile>"STARTUP\ST\STM32L1xx\startup_stm32l151xb.s" ("STM32L1xx Medium density Startup Code")</StartupFile>
           <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL020000)</FlashDriverDll>
           <DeviceId>5244</DeviceId>
           <RegisterFile>stm32l1xx.h</RegisterFile>
@@ -3994,6 +4533,7 @@
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
             <useXO>0</useXO>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
             <v6Lang>0</v6Lang>
             <v6LangP>0</v6LangP>
             <vShortEn>0</vShortEn>
@@ -4003,6 +4543,20 @@
               <Define>USE_DEBUGGER LOW_POWER_MODE_ENABLE USE_BAND_868 USE_BOOTLOADER</Define>
               <Undefine></Undefine>
               <IncludePath>..\..\..\..\src;..\..\..\..\src\boards\SensorNode;..\..\..\..\src\boards\SensorNode\cmsis;..\..\..\..\src\boards\mcu\stm32;..\..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\inc;..\..\..\..\src\mac;..\..\..\..\src\peripherals;..\..\..\..\src\radio;..\..\..\..\src\system;..\..\..\..\src\system\crypto</IncludePath>
+=======
+            <v6Lang>1</v6Lang>
+            <v6LangP>1</v6LangP>
+            <vShortEn>1</vShortEn>
+            <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
+            <VariousControls>
+              <MiscControls></MiscControls>
+              <Define>USE_HAL_DRIVER STM32L151xB USE_DEBUGGER USE_BAND_915 USE_MODEM_FSK</Define>
+              <Undefine></Undefine>
+              <IncludePath>..\..\..\src;..\..\..\src\boards\LoRaMote;..\..\..\src\boards\LoRaMote\cmsis;..\..\..\src\boards\mcu\stm32;..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\inc;..\..\..\src\mac;..\..\..\src\peripherals;..\..\..\src\radio;..\..\..\src\system;..\..\..\src\system\crypto</IncludePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </VariousControls>
           </Cads>
           <Aads>
@@ -4015,6 +4569,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -4101,11 +4656,14 @@
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\sx1276-board.c</FilePath>
             </File>
             <File>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FileName>timer-board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\timer-board.c</FilePath>
             </File>
             <File>
+=======
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
               <FileName>uart-board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\uart-board.c</FilePath>
@@ -4116,9 +4674,13 @@
           <GroupName>boards\RFM95W-BB\cmsis</GroupName>
           <Files>
             <File>
-              <FileName>startup_stm32l1xx_md.s</FileName>
+              <FileName>startup_stm32l151xb.s</FileName>
               <FileType>2</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\cmsis\arm-std\startup_stm32l1xx_md.s</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\LoRaMote\cmsis\arm-std\startup_stm32l151xb.s</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
               <FileName>system_stm32l1xx.c</FileName>
@@ -4128,6 +4690,7 @@
           </Files>
         </Group>
         <Group>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
           <GroupName>boards\RFM95W-BB\usb\cdc</GroupName>
           <Files>
             <File>
@@ -4154,76 +4717,155 @@
         </Group>
         <Group>
           <GroupName>boards\mcu\STM32L1xx_StdPeriph_Driver</GroupName>
+=======
+          <GroupName>boards\LoRaMote\STM32L1xx_HAL_Driver</GroupName>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
           <Files>
             <File>
-              <FileName>misc.c</FileName>
+              <FileName>stm32l1xx_hal.c</FileName>
               <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_adc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_cortex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_cortex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_dma.c</FileName>
+              <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\misc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_dma.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_adc.c</FileName>
+              <FileName>stm32l1xx_hal_gpio.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_adc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_gpio.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_dbgmcu.c</FileName>
+              <FileName>stm32l1xx_hal_i2c.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dbgmcu.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_i2c.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_dma.c</FileName>
+              <FileName>stm32l1xx_hal_pcd.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dma.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pcd.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_exti.c</FileName>
+              <FileName>stm32l1xx_hal_pcd_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_exti.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pcd_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_gpio.c</FileName>
+              <FileName>stm32l1xx_hal_pwr.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_gpio.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_i2c.c</FileName>
+              <FileName>stm32l1xx_hal_pwr_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_i2c.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_pwr.c</FileName>
+              <FileName>stm32l1xx_hal_rcc.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_pwr.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_rcc.c</FileName>
+              <FileName>stm32l1xx_hal_rcc_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rcc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_rtc.c</FileName>
+              <FileName>stm32l1xx_hal_rtc.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rtc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_spi.c</FileName>
+              <FileName>stm32l1xx_hal_rtc_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_spi.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_syscfg.c</FileName>
+              <FileName>stm32l1xx_hal_spi.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_syscfg.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_tim.c</FileName>
+              <FileName>stm32l1xx_hal_spi_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_tim.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_usart.c</FileName>
+              <FileName>stm32l1xx_hal_uart.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_usart.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_uart.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
           </Files>
         </Group>
@@ -4368,13 +5010,14 @@
       <TargetName>LoRaMac-915</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060300::V5.06 update 3 (build 300)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32L151C8</Device>
           <Vendor>STMicroelectronics</Vendor>
           <Cpu>IRAM(0x20000000-0x20003FFF) IROM(0x8000000-0x801FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
-          <StartupFile>"STARTUP\ST\STM32L1xx\startup_stm32l1xx_md.s" ("STM32L1xx Medium density Startup Code")</StartupFile>
+          <StartupFile>"STARTUP\ST\STM32L1xx\startup_stm32l151xb.s" ("STM32L1xx Medium density Startup Code")</StartupFile>
           <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL020000)</FlashDriverDll>
           <DeviceId>5244</DeviceId>
           <RegisterFile>stm32l1xx.h</RegisterFile>
@@ -4720,6 +5363,7 @@
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
             <useXO>0</useXO>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
             <v6Lang>0</v6Lang>
             <v6LangP>0</v6LangP>
             <vShortEn>0</vShortEn>
@@ -4729,6 +5373,20 @@
               <Define>USE_DEBUGGER LOW_POWER_MODE_ENABLE USE_BAND_915</Define>
               <Undefine></Undefine>
               <IncludePath>..\..\..\..\src;..\..\..\..\src\boards\SensorNode;..\..\..\..\src\boards\SensorNode\cmsis;..\..\..\..\src\boards\mcu\stm32;..\..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\inc;..\..\..\..\src\mac;..\..\..\..\src\peripherals;..\..\..\..\src\radio;..\..\..\..\src\system;..\..\..\..\src\system\crypto</IncludePath>
+=======
+            <v6Lang>1</v6Lang>
+            <v6LangP>1</v6LangP>
+            <vShortEn>1</vShortEn>
+            <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
+            <VariousControls>
+              <MiscControls></MiscControls>
+              <Define>USE_HAL_DRIVER STM32L151xB USE_DEBUGGER USE_BAND_915 USE_MODEM_LORA USE_BOOTLOADER</Define>
+              <Undefine></Undefine>
+              <IncludePath>..\..\..\src;..\..\..\src\boards\LoRaMote;..\..\..\src\boards\LoRaMote\cmsis;..\..\..\src\boards\mcu\stm32;..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\inc;..\..\..\src\mac;..\..\..\src\peripherals;..\..\..\src\radio;..\..\..\src\system;..\..\..\src\system\crypto</IncludePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </VariousControls>
           </Cads>
           <Aads>
@@ -4741,6 +5399,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -4827,11 +5486,14 @@
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\sx1276-board.c</FilePath>
             </File>
             <File>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FileName>timer-board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\timer-board.c</FilePath>
             </File>
             <File>
+=======
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
               <FileName>uart-board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\uart-board.c</FilePath>
@@ -4842,9 +5504,13 @@
           <GroupName>boards\RFM95W-BB\cmsis</GroupName>
           <Files>
             <File>
-              <FileName>startup_stm32l1xx_md.s</FileName>
+              <FileName>startup_stm32l151xb.s</FileName>
               <FileType>2</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\cmsis\arm-std\startup_stm32l1xx_md.s</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\LoRaMote\cmsis\arm-std\startup_stm32l151xb.s</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
               <FileName>system_stm32l1xx.c</FileName>
@@ -4879,77 +5545,157 @@
           </Files>
         </Group>
         <Group>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
           <GroupName>boards\mcu\STM32L1xx_StdPeriph_Driver</GroupName>
+=======
+          <GroupName>boards\LoRaMote\STM32L1xx_HAL_Driver</GroupName>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
           <Files>
             <File>
-              <FileName>misc.c</FileName>
+              <FileName>stm32l1xx_hal.c</FileName>
               <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_adc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_cortex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_cortex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_dma.c</FileName>
+              <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\misc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_dma.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_adc.c</FileName>
+              <FileName>stm32l1xx_hal_gpio.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_adc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_gpio.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_dbgmcu.c</FileName>
+              <FileName>stm32l1xx_hal_i2c.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dbgmcu.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_i2c.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_dma.c</FileName>
+              <FileName>stm32l1xx_hal_pcd.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dma.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pcd.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_exti.c</FileName>
+              <FileName>stm32l1xx_hal_pcd_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_exti.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pcd_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_gpio.c</FileName>
+              <FileName>stm32l1xx_hal_pwr.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_gpio.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_i2c.c</FileName>
+              <FileName>stm32l1xx_hal_pwr_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_i2c.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_pwr.c</FileName>
+              <FileName>stm32l1xx_hal_rcc.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_pwr.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_rcc.c</FileName>
+              <FileName>stm32l1xx_hal_rcc_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rcc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_rtc.c</FileName>
+              <FileName>stm32l1xx_hal_rtc.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rtc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_spi.c</FileName>
+              <FileName>stm32l1xx_hal_rtc_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_spi.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_syscfg.c</FileName>
+              <FileName>stm32l1xx_hal_spi.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_syscfg.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_tim.c</FileName>
+              <FileName>stm32l1xx_hal_spi_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_tim.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_usart.c</FileName>
+              <FileName>stm32l1xx_hal_uart.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_usart.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_uart.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
           </Files>
         </Group>
@@ -5094,15 +5840,22 @@
       <TargetName>LoRaMac-915-Bootloader</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060300::V5.06 update 3 (build 300)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32L151C8</Device>
           <Vendor>STMicroelectronics</Vendor>
           <Cpu>IRAM(0x20000000-0x200027FF) IROM(0x8000000-0x800FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
           <StartupFile>"STARTUP\ST\STM32L1xx\startup_stm32l1xx_md.s" ("STM32L1xx Medium density Startup Code")</StartupFile>
           <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL010000)</FlashDriverDll>
           <DeviceId>5238</DeviceId>
+=======
+          <StartupFile>"STARTUP\ST\STM32L1xx\startup_stm32l151xb.s" ("STM32L1xx Medium density Startup Code")</StartupFile>
+          <FlashDriverDll>ULP2CM3(-O207 -S8 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32L1xx_128 -FS08000000 -FL020000)</FlashDriverDll>
+          <DeviceId>5244</DeviceId>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
           <RegisterFile>stm32l1xx.h</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
@@ -5446,6 +6199,7 @@
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
             <useXO>0</useXO>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
             <v6Lang>0</v6Lang>
             <v6LangP>0</v6LangP>
             <vShortEn>0</vShortEn>
@@ -5455,6 +6209,20 @@
               <Define>USE_DEBUGGER LOW_POWER_MODE_ENABLE USE_BAND_915 USE_BOOTLOADER</Define>
               <Undefine></Undefine>
               <IncludePath>..\..\..\..\src;..\..\..\..\src\boards\SensorNode;..\..\..\..\src\boards\SensorNode\cmsis;..\..\..\..\src\boards\mcu\stm32;..\..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\inc;..\..\..\..\src\mac;..\..\..\..\src\peripherals;..\..\..\..\src\radio;..\..\..\..\src\system;..\..\..\..\src\system\crypto</IncludePath>
+=======
+            <v6Lang>1</v6Lang>
+            <v6LangP>1</v6LangP>
+            <vShortEn>1</vShortEn>
+            <vShortWch>1</vShortWch>
+            <v6Lto>0</v6Lto>
+            <v6WtE>0</v6WtE>
+            <v6Rtti>0</v6Rtti>
+            <VariousControls>
+              <MiscControls></MiscControls>
+              <Define>USE_HAL_DRIVER STM32L151xB USE_DEBUGGER USE_BAND_915 USE_MODEM_FSK USE_BOOTLOADER</Define>
+              <Undefine></Undefine>
+              <IncludePath>..\..\..\src;..\..\..\src\boards\LoRaMote;..\..\..\src\boards\LoRaMote\cmsis;..\..\..\src\boards\mcu\stm32;..\..\..\src\boards\mcu\stm32\cmsis;..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\inc;..\..\..\src\mac;..\..\..\src\peripherals;..\..\..\src\radio;..\..\..\src\system;..\..\..\src\system\crypto</IncludePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </VariousControls>
           </Cads>
           <Aads>
@@ -5467,6 +6235,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
+            <uClangAs>0</uClangAs>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -5553,11 +6322,14 @@
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\sx1276-board.c</FilePath>
             </File>
             <File>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FileName>timer-board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\timer-board.c</FilePath>
             </File>
             <File>
+=======
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
               <FileName>uart-board.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\uart-board.c</FilePath>
@@ -5568,9 +6340,13 @@
           <GroupName>boards\RFM95W-BB\cmsis</GroupName>
           <Files>
             <File>
-              <FileName>startup_stm32l1xx_md.s</FileName>
+              <FileName>startup_stm32l151xb.s</FileName>
               <FileType>2</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\RFM95W-BB\cmsis\arm-std\startup_stm32l1xx_md.s</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\LoRaMote\cmsis\arm-std\startup_stm32l151xb.s</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
               <FileName>system_stm32l1xx.c</FileName>
@@ -5605,77 +6381,157 @@
           </Files>
         </Group>
         <Group>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
           <GroupName>boards\mcu\STM32L1xx_StdPeriph_Driver</GroupName>
+=======
+          <GroupName>boards\LoRaMote\STM32L1xx_HAL_Driver</GroupName>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
           <Files>
             <File>
-              <FileName>misc.c</FileName>
+              <FileName>stm32l1xx_hal.c</FileName>
               <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_adc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_cortex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_cortex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32l1xx_hal_dma.c</FileName>
+              <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\misc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_dma.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_adc.c</FileName>
+              <FileName>stm32l1xx_hal_gpio.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_adc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_gpio.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_dbgmcu.c</FileName>
+              <FileName>stm32l1xx_hal_i2c.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dbgmcu.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_i2c.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_dma.c</FileName>
+              <FileName>stm32l1xx_hal_pcd.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_dma.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pcd.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_exti.c</FileName>
+              <FileName>stm32l1xx_hal_pcd_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_exti.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pcd_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_gpio.c</FileName>
+              <FileName>stm32l1xx_hal_pwr.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_gpio.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_i2c.c</FileName>
+              <FileName>stm32l1xx_hal_pwr_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_i2c.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_pwr_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_pwr.c</FileName>
+              <FileName>stm32l1xx_hal_rcc.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_pwr.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_rcc.c</FileName>
+              <FileName>stm32l1xx_hal_rcc_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rcc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rcc_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_rtc.c</FileName>
+              <FileName>stm32l1xx_hal_rtc.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_rtc.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_spi.c</FileName>
+              <FileName>stm32l1xx_hal_rtc_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_spi.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_rtc_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_syscfg.c</FileName>
+              <FileName>stm32l1xx_hal_spi.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_syscfg.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_tim.c</FileName>
+              <FileName>stm32l1xx_hal_spi_ex.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_tim.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_spi_ex.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
             <File>
-              <FileName>stm32l1xx_usart.c</FileName>
+              <FileName>stm32l1xx_hal_uart.c</FileName>
               <FileType>1</FileType>
+<<<<<<< HEAD:Keil/RFM95W-BB/LoRaMac/classC/LoRaMac.uvproj
               <FilePath>..\..\..\..\src\boards\mcu\stm32\STM32L1xx_StdPeriph_Driver\src\stm32l1xx_usart.c</FilePath>
+=======
+              <FilePath>..\..\..\src\boards\mcu\stm32\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_uart.c</FilePath>
+>>>>>>> lora-net/master:Keil/LoRaMote/rx-sensi/rx-sensi.uvproj
             </File>
           </Files>
         </Group>

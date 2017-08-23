@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 lst/
 obj/
 [Bb]uild/
@@ -17,3 +18,24 @@ obj/
 *.svn
 *.uvopt
 *.tmp
+=======
+lst/
+obj/
+bin/
+*.dep
+*.uvgui.*
+*.uvgui_*.bak
+*.uvguix.*
+*.uvguix_*.bak
+*_uvopt.bak
+*_uvoptx.bak
+*_uvproj.bak
+*_uvprojx.bak
+*.ctx
+*.dbi
+*.xdb
+*.svn
+*.pbxproj
+*.cogui
+*.comarker
+>>>>>>> lora-net/master

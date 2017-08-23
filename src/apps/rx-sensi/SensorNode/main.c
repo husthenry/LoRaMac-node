@@ -7,7 +7,7 @@
     (C)2013 Semtech
 
 Description: Radio sensitivity test.
-             When LED1 stops blinking LoRa packets aren't received any more and 
+             When LED1 stops blinking LoRa packets aren't received any more and
              the sensitivity level has been reached.
              By reading the RF generator output power we can estimate the board
              sensitivity.
@@ -24,9 +24,9 @@ Maintainer: Miguel Luis and Gregory Cristian
 
 #define RF_FREQUENCY                                434000000 // Hz
 
-#elif defined( USE_BAND_470 )
+#elif defined( USE_BAND_780 )
 
-#define RF_FREQUENCY                                470000000 // Hz
+#define RF_FREQUENCY                                780000000 // Hz
 
 #elif defined( USE_BAND_868 )
 
@@ -51,7 +51,7 @@ Maintainer: Miguel Luis and Gregory Cristian
                                                               //  2: 4/6,
                                                               //  3: 4/7,
                                                               //  4: 4/8]
-#define LORA_SYMBOL_TIMEOUT                         5         // Symbols                                                              
+#define LORA_SYMBOL_TIMEOUT                         5         // Symbols
 #define LORA_PREAMBLE_LENGTH                        8         // Same for Tx and Rx
 #define LORA_FIX_LENGTH_PAYLOAD_ON                  false
 #define LORA_IQ_INVERSION_ON                        false
@@ -83,7 +83,7 @@ void OnRxDone( uint8_t *payload, uint16_t size, int16_t rssi, int8_t snr );
  */
 int main( void )
 {
-    // Target board initialisation
+    // Target board initialization
     BoardInitMcu( );
     BoardInitPeriph( );
 
@@ -111,7 +111,7 @@ int main( void )
 #else
     #error "Please define a frequency band in the compiler options."
 #endif
-    
+
     Radio.Rx( 0 ); // Continuous Rx
 
     while( 1 )

@@ -21,6 +21,7 @@ Maintainer: Miguel Luis and Gregory Cristian
 #include <string.h>
 #include <stdint.h>
 #include "stm32l1xx.h"
+#include "stm32l1xx_hal.h"
 #include "utilities.h"
 #include "timer.h"
 #include "delay.h"
@@ -38,25 +39,17 @@ Maintainer: Miguel Luis and Gregory Cristian
 #include "gps.h"
 #include "gps-board.h"
 #include "rtc-board.h"
-#include "timer-board.h"
 #include "sx1272-board.h"
 #include "uart-board.h"
 
 #if defined( USE_USB_CDC )
-#include "usb-cdc-board.h"
+#include "uart-usb-board.h"
 #endif
 
 /*!
  * Define indicating if an external IO expander is to be used
  */
 #define BOARD_IOE_EXT
-
-/*!
- * NULL definition
- */
-#ifndef NULL
-    #define NULL                                    ( ( void * )0 )
-#endif
 
 /*!
  * Generic definition
@@ -66,28 +59,8 @@ Maintainer: Miguel Luis and Gregory Cristian
 #endif
 
 #ifndef FAIL
-#define FAIL                                        0  
+#define FAIL                                        0
 #endif
-
-/*!
- * Battery level ratio (battery dependent)
- */
-#define BATTERY_STEP_LEVEL                          0.23
-
-
-/*!
- * Unique Devices IDs register set ( STM32L1xxx )
- */
-#define         ID1                                 ( 0x1FF80050 )
-#define         ID2                                 ( 0x1FF80054 )
-#define         ID3                                 ( 0x1FF80064 )
-
-/*!
- * Random seed generated using the MCU Unique ID
- */
-#define RAND_SEED                                   ( ( *( uint32_t* )ID1 ) ^ \
-                                                      ( *( uint32_t* )ID2 ) ^ \
-                                                      ( *( uint32_t* )ID3 ) )
 
 /*!
  * Board IO Extender pins definitions
@@ -148,15 +121,16 @@ Maintainer: Miguel Luis and Gregory Cristian
 #define I2C_SCL                                     PB_8
 #define I2C_SDA                                     PB_9
 
-#define CON_EXT_1                                   PB_13                                                                        
-#define CON_EXT_3                                   PB_15                                
-#define CON_EXT_7                                   PB_12   
+#define CON_EXT_1                                   PB_13
+#define CON_EXT_3                                   PB_15
+#define CON_EXT_7                                   PB_12
 #define CON_EXT_8                                   PB_14
-#define CON_EXT_9                                   PA_1     
-#define BAT_LEVEL                                   PA_3
+#define CON_EXT_9                                   PA_1
+#define BAT_LEVEL_PIN                               PA_3
+#define BAT_LEVEL_CHANNEL                           ADC_CHANNEL_3
 
 #define BOOT_1                                      PB_2
-    
+
 #define GPS_PPS                                     PA_8
 #define UART_TX                                     PA_9
 #define UART_RX                                     PA_10
@@ -168,22 +142,9 @@ Maintainer: Miguel Luis and Gregory Cristian
 /*!
  * LED GPIO pins objects
  */
-extern Gpio_t IrqMpl3115;
-extern Gpio_t IrqMag3110;
-extern Gpio_t GpsPowerEn;
-extern Gpio_t NcIoe3;
-extern Gpio_t NcIoe4;
-extern Gpio_t NcIoe5;
-extern Gpio_t NcIoe6;
-extern Gpio_t NcIoe7;
-extern Gpio_t NIrqSX9500;
-extern Gpio_t Irq1Mma8451;
-extern Gpio_t Irq2Mma8451;
-extern Gpio_t TxEnSX9500;
 extern Gpio_t Led1;
 extern Gpio_t Led2;
 extern Gpio_t Led3;
-
 
 /*!
  * Debug GPIO pins objects
@@ -193,21 +154,40 @@ extern Gpio_t DbgPin1;
 extern Gpio_t DbgPin2;
 extern Gpio_t DbgPin3;
 extern Gpio_t DbgPin4;
+extern Gpio_t DbgPin5;
 #endif
 
 /*!
  * MCU objects
  */
-extern Adc_t Adc;
 extern I2c_t I2c;
 extern Uart_t Uart1;
 #if defined( USE_USB_CDC )
 extern Uart_t UartUsb;
 #endif
 
-extern Gpio_t GpsPps;
-extern Gpio_t GpsRx;
-extern Gpio_t GpsTx;
+/*!
+ * Possible power sources
+ */
+enum BoardPowerSources
+{
+    USB_POWER = 0,
+    BATTERY_POWER,
+};
+
+/*!
+ * \brief Disable interrupts
+ *
+ * \remark IRQ nesting is managed
+ */
+void BoardDisableIrq( void );
+
+/*!
+ * \brief Enable interrupts
+ *
+ * \remark IRQ nesting is managed
+ */
+void BoardEnableIrq( void );
 
 /*!
  * \brief Initializes the target board peripherals.
@@ -226,17 +206,42 @@ void BoardInitPeriph( void );
 void BoardDeInitMcu( void );
 
 /*!
- * \brief Measure the Battery level
+ * \brief Measure the Battery voltage
  *
- * \retval value  battery level ( 0: very low, 254: fully charged )
+ * \retval value  battery voltage in volts
  */
-uint8_t BoardMeasureBatterieLevel( void );
+uint32_t BoardGetBatteryVoltage( void );
 
 /*!
- * \brief Gets the board 64 bits unique ID 
+ * \brief Get the current battery level
+ *
+ * \retval value  battery level [  0: USB,
+ *                                 1: Min level,
+ *                                 x: level
+ *                               254: fully charged,
+ *                               255: Error]
+ */
+uint8_t BoardGetBatteryLevel( void );
+
+/*!
+ * Returns a pseudo random seed generated using the MCU Unique ID
+ *
+ * \retval seed Generated pseudo random seed
+ */
+uint32_t BoardGetRandomSeed( void );
+
+/*!
+ * \brief Gets the board 64 bits unique ID
  *
  * \param [IN] id Pointer to an array that will contain the Unique ID
  */
 void BoardGetUniqueId( uint8_t *id );
+
+/*!
+ * \brief Get the board power source
+ *
+ * \retval value  power source [0: USB_POWER, 1: BATTERY_POWER]
+ */
+uint8_t GetBoardPowerSource( void );
 
 #endif // __BOARD_H__
