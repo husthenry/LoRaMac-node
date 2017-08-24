@@ -38,4 +38,7 @@ bin/
 *.pbxproj
 *.cogui
 *.comarker
+JLinkLog.txt
+JLinkSettings.ini
+EventRecorderStub.scvd
 >>>>>>> lora-net/master
